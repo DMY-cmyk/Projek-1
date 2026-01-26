@@ -1,0 +1,17 @@
+/target
+**/*.rs.bk
+Cargo.lock
+Plan.md
+
+# Credentials / secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.kdbx
+credentials.json
+*credentials*.json
+token.json
+*token*.json
