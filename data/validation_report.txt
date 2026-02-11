@@ -1,0 +1,38 @@
+﻿Validation Report - 2026-02-11 21:14:32
+
+Income Statement:
+  Revenue: 0 missing
+  RevenueAlt: 5 missing
+  GrossProfit: 0 missing
+  OperatingIncome: 0 missing
+  NetIncome: 0 missing
+  EPSDiluted: 5 missing
+
+Balance Sheet:
+  CashAndEquivalents: 0 missing
+  MarketableSecurities: 0 missing
+  MarketableSecuritiesNoncurrent: 0 missing
+  TotalDebt: 5 missing
+  TotalEquity: 0 missing
+  TotalAssets: 0 missing
+  TotalLiabilities: 0 missing
+  CurrentAssets: 0 missing
+  CurrentLiabilities: 0 missing
+  Inventory: 0 missing
+
+Cash Flow:
+  CFO: 0 missing
+  CFI: 0 missing
+  CFF: 0 missing
+  Capex: 0 missing
+  DepAmort: 5 missing
+  Buyback: 0 missing
+  Dividends: 0 missing
+
+Shares:
+  DilutedSharesBillions: 0 missing
+
+Year Alignment:
+  Income vs Balance: True
+  Income vs Cashflow: True
+  Income vs Shares: True

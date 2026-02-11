@@ -1,0 +1,7 @@
+analysis_date = "2025-01-01"
+reporting_cutoff = "most recent fiscal year available as of 2025-01-01"
+currency = "USD"
+units = "billions"
+history_years = 5
+peers = ["Microsoft", "Alphabet", "Samsung"]
+deliverable = "report"
