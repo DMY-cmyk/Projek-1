@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(winget upgrade:*)",
+      "Bash(python3:*)",
+      "Bash(node:*)",
+      "Bash(pwsh -File:*)",
+      "Bash(where.exe powershell.exe)",
+      "Bash(cmd.exe /c \"where powershell.exe\")",
+      "Bash(powershell.exe -File scripts/extract_companyfacts.ps1 -CompanyFactsPath research/sec/companyfacts_2026-02-11.json -OutDir data)",
+      "Bash(powershell.exe -Command:*)",
+      "Bash(powershell.exe -File scripts/check_debt_tags.ps1)",
+      "Bash(powershell.exe -File scripts/compute_metrics.ps1 -DataDir data -OutDir data)",
+      "Bash(powershell.exe -File scripts/compute_valuation.ps1 -Price 278.12 -AsOfDate 2026-02-06 -DataDir data -OutDir data)",
+      "Bash(powershell.exe -File scripts/validate_financials.ps1 -DataDir data -OutPath data/validation_report.txt)",
+      "WebFetch(domain:www.fool.com)",
+      "WebFetch(domain:seekingalpha.com)",
+      "WebSearch",
+      "WebFetch(domain:sixcolors.com)",
+      "WebFetch(domain:www.insidermonkey.com)",
+      "WebFetch(domain:bullfincher.io)",
+      "WebFetch(domain:www.stockinsights.ai)",
+      "WebFetch(domain:www.webpronews.com)"
+    ]
+  }
+}

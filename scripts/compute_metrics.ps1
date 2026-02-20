@@ -145,10 +145,12 @@ $balanceRows | Export-Csv -Path (Join-Path $OutDir "metrics_balance.csv") -NoTyp
 $cashRows | Export-Csv -Path (Join-Path $OutDir "metrics_cashflow.csv") -NoTypeInformation
 
 if ($years.Count -ge 2) {
-    $startYear = [int]$years[-1]
-    $endYear = [int]$years[0]
-    $startRev = To-Num $incMap[$startYear].Revenue
-    $endRev = To-Num $incMap[$endYear].Revenue
+    $startYearKey = [string]$years[-1]
+    $endYearKey = [string]$years[0]
+    $startYear = [int]$startYearKey
+    $endYear = [int]$endYearKey
+    $startRev = To-Num $incMap[$startYearKey].Revenue
+    $endRev = To-Num $incMap[$endYearKey].Revenue
     $periods = $endYear - $startYear
     $cagr = $null
     if ($startRev -and $endRev -and $periods -gt 0) {

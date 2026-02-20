@@ -85,16 +85,62 @@ if ($revenueMap.Count -eq 0) {
 
 $fyList = $revenueMap.Keys | Sort-Object -Descending | Select-Object -First $Years
 
+function Get-FyValueWithFallbacks([string[]]$tagList, [string]$unit = "USD", [string]$form = "10-K") {
+    foreach ($t in $tagList) {
+        $m = Get-FyValue $t $unit $form
+        if ($m.Count -gt 0) { return $m }
+    }
+    return @{}
+}
+
+function Get-FyValueSum([string[]]$tagList, [string]$unit = "USD", [string]$form = "10-K") {
+    $maps = @()
+    foreach ($t in $tagList) {
+        $m = Get-FyValue $t $unit $form
+        if ($m.Count -gt 0) { $maps += $m }
+    }
+    if ($maps.Count -eq 0) { return @{} }
+    $result = @{}
+    $allFys = $maps | ForEach-Object { $_.Keys } | Sort-Object -Unique
+    foreach ($fy in $allFys) {
+        $sum = 0.0
+        foreach ($m in $maps) {
+            if ($m.ContainsKey($fy)) { $sum += $m[$fy].val }
+        }
+        $result[$fy] = @{ val = $sum }
+    }
+    return $result
+}
+
 function Build-Table($tags, [bool]$scaleUsd) {
     $rows = @()
     foreach ($fy in $fyList) {
         $row = [ordered]@{ FiscalYear = $fy }
         foreach ($key in $tags.Keys) {
             $tag = $tags[$key]
-            $map = Get-FyValue $tag
             $val = $null
-            if ($map.ContainsKey($fy)) { $val = $map[$fy].val }
-            if ($scaleUsd) { $val = Scale-Usd $val }
+            if ($key -eq "TotalDebt") {
+                $map = Get-FyValueSum @("LongTermDebtNoncurrent", "LongTermDebtCurrent", "CommercialPaper")
+                if ($map.Count -eq 0) {
+                    $map = Get-FyValueSum @("LongTermDebt", "CommercialPaper")
+                }
+                if ($map.Count -eq 0) {
+                    $map = Get-FyValueWithFallbacks @("Debt", "LongTermDebtAndCapitalLeaseObligations")
+                }
+                if ($map.ContainsKey($fy)) { $val = $map[$fy].val }
+                if ($null -ne $val) { $val = Scale-Usd $val }
+            } elseif ($key -eq "DepAmort") {
+                $map = Get-FyValueWithFallbacks @("DepreciationDepletionAndAmortization", "DepreciationAndAmortization", "Depreciation")
+                if ($map.ContainsKey($fy)) { $val = $map[$fy].val }
+                if ($scaleUsd) { $val = Scale-Usd $val }
+            } elseif ($key -eq "EPSDiluted") {
+                $map = Get-FyValue "EarningsPerShareDiluted" "USD/shares"
+                if ($map.ContainsKey($fy)) { $val = $map[$fy].val }
+            } else {
+                $map = Get-FyValue $tag
+                if ($map.ContainsKey($fy)) { $val = $map[$fy].val }
+                if ($scaleUsd) { $val = Scale-Usd $val }
+            }
             $row[$key] = $val
         }
         $rows += [pscustomobject]$row
