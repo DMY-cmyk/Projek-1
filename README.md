@@ -1,16 +1,17 @@
 # Projek-1
+Docs updated: 2026-02-20
 
 Rust workspace centered on a detailed plan to analyze Apple Inc. fundamentals using SEC `data.sec.gov` APIs. The code is a minimal starter binary and can be expanded into a data-fetching and analysis tool.
 
 ## Contents
 - `src/main.rs` starter binary.
-- `Plan.md` detailed analysis plan (gitignored).
+- `Plan.md` detailed analysis plan.
 - `analysis_config.toml` plan parameters used for the analysis run.
 - `scripts/` PowerShell pipeline for SEC fetch/extract/metrics/report.
 - `research/`, `data/`, `models/`, `outputs/` working folders.
 - `.gitignore` includes Rust build outputs and credential/secrets patterns.
 
-## Plan parameters (from Plan.md)
+## Plan parameters (from `analysis_config.toml`)
 - Analysis date: 2025-01-01.
 - Reporting cut-off: most recent fiscal year available as of 2025-01-01.
 - Currency/units: USD, billions.
