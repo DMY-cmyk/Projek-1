@@ -107,6 +107,12 @@ Verifikasi output dan timestamp di `outputs/refresh_status.md`.
 .\scripts\refresh_all_status.ps1
 ```
 
+## Quick review (PowerShell)
+Ringkas output utama di `outputs/quick_review.md`.
+```powershell
+.\scripts\build_quick_review.ps1
+```
+
 ## Refresh multiple peer (PowerShell)
 Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
 ```powershell

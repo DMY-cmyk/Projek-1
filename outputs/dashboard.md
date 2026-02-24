@@ -43,6 +43,9 @@ Run all generators and capture a run log in outputs/run_log.md (run scripts/buil
 ## Refresh Status
 Verify expected outputs with outputs/refresh_status.md (run scripts/refresh_all_status.ps1).
 
+## Quick Review
+Summarize key outputs in outputs/quick_review.md (run scripts/build_quick_review.ps1).
+
 ## Quarterly Inputs (Optional)
 If quarterly CSVs exist, drop them into data/quarterly_*.csv and re-run this script.
 Expected columns: Period, Revenue, GrossMargin, OperatingMargin, NetMargin, FCF.

@@ -107,6 +107,12 @@ Verify expected outputs and timestamps in `outputs/refresh_status.md`.
 .\scripts\refresh_all_status.ps1
 ```
 
+## Quick review (PowerShell)
+Summarize key outputs in `outputs/quick_review.md`.
+```powershell
+.\scripts\build_quick_review.ps1
+```
+
 ## Peer multiples refresh (PowerShell)
 Fetch latest peer multiples (best-effort HTML parsing) into `data/peer_multiples.csv`.
 ```powershell
