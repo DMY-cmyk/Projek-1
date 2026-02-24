@@ -89,6 +89,12 @@ Jalankan semua generator dan tulis run log di `outputs/run_log.md`.
 .\scripts\build_report_pack.ps1
 ```
 
+## One-command refresh (PowerShell)
+Ambil data SEC dan jalankan report pack dalam satu perintah.
+```powershell
+.\scripts\refresh_all.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
+```
+
 ## Refresh multiple peer (PowerShell)
 Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
 ```powershell

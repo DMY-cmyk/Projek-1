@@ -89,6 +89,12 @@ Run all generators and write a run log in `outputs/run_log.md`.
 .\scripts\build_report_pack.ps1
 ```
 
+## One-command refresh (PowerShell)
+Fetch SEC data and run the full report pack in one command.
+```powershell
+.\scripts\refresh_all.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
+```
+
 ## Peer multiples refresh (PowerShell)
 Fetch latest peer multiples (best-effort HTML parsing) into `data/peer_multiples.csv`.
 ```powershell
