@@ -1,4 +1,4 @@
-# Apple Fundamentals Report
+﻿# Apple Fundamentals Report
 
 ## Executive Summary
 - FY2025 revenue was $416.161B with YoY growth of 6.43%.
@@ -142,7 +142,6 @@ Source notes: `research/notes_management_governance.md`
 Committee composition in the 2026 proxy shows continued emphasis on independent oversight across audit/finance, compensation, and governance. Shareholder proposals in 2026 include a request for a China entanglement audit, indicating ongoing stakeholder focus on geopolitical and supply chain risk.
 
 ## Valuation Snapshot
-Data source: `data/valuation_snapshot.csv` and `research/market_price_source.txt`
 |AsOfDate|Price|MarketCapBillions|EnterpriseValueBillions|PE|EV_EBITDA|EV_FCF|P_FCF|BuybackYield|DividendYield|PayoutRatio|TotalPayoutRatio|
 |---|---|---|---|---|---|---|---|---|---|---|---|
 |2026-02-20|264.58|3969.9435|3936.1805|35.4428|27.1933|39.8532|40.195|0.0228|0.0039|0.1377|0.9475|
@@ -150,14 +149,18 @@ Data source: `data/valuation_snapshot.csv` and `research/market_price_source.txt
 ## Non-Recurring Items and Multiples
 - **FY2025 (latest year, used for snapshot multiples):** No material one-time items identified. The P/E of 35.4 and other multiples reflect clean operating earnings.
 - **FY2024 impact on trailing comparisons:** The $10.2B one-time EU State Aid tax charge reduced FY2024 reported net income to $93.7B. Excluding the charge, adjusted FY2024 net income would be ~$103.9B. This means:
-  - Reported FY2024→FY2025 net income growth appears +19.5%, but adjusted growth is ~+7.8%.
+  - Reported FY2024 to FY2025 net income growth appears +19.5%, but adjusted growth is ~+7.8%.
   - FY2024 FCF conversion of 1.16x (vs. typical ~1.0x) is inflated because the tax charge reduced reported net income while cash flow was unaffected (the $15.8B payment to Ireland occurred in FY2024 Q4 but was classified as an investing outflow per the escrow arrangement).
 - **Conclusion:** Current snapshot multiples (based on FY2025) are not distorted by one-time items. However, YoY growth comparisons vs FY2024 should be interpreted with the EU tax charge in mind.
 
 ## Valuation Context
-- Peer median multiples (Apple, Microsoft, Alphabet, Samsung): P/E 27.85, EV/EBITDA 20.74, P/FCF 35.39.
+- Peer median multiples (Apple, Microsoft, Alphabet, Samsung): P/E 28.28, EV/EBITDA 20.59, P/FCF 38.54.
 - Apple current multiples vs peer median: P/E and EV/EBITDA remain above the peer median; P/FCF is also above median.
 - Historical context: Macrotrends provides multi-year series for Apple P/E and price-to-free-cash-flow; use those charts for historical range context.
+
+Peer multiples chart (as of latest closes shown in sources; see `data/peer_multiples.csv` and `research/peer_multiples_sources.md`):
+
+![Peer Valuation Multiples (As of latest close)](charts/peer_multiples.png)
 
 ## DCF Base Case (Illustrative)
 Source: `models/dcf_summary.md`, `models/dcf_scenarios.csv`, `models/dcf_sensitivity.csv`
@@ -176,6 +179,6 @@ Source notes: `research/notes_thesis_scenarios.md`
 Key KPIs to monitor each quarter include total revenue growth, services mix, iPhone cycle strength, and margin stability. Capital return pace (buybacks and dividends) is a key indicator of management confidence and capital discipline.
 
 ## Appendix
-- Data sources: `research/sec/`, `research/market_price_source.txt`
-- Assumptions and calculations: `data/`, `models/dcf_summary.md`
-- Reconciliation checks: `data/reconciliation_notes.md`, `data/reconciliation_balance_sheet.md`, `data/reconciliation_cashflow.md`
+- Data sources: `research/sec/`, `research/market_price_source.txt`, `research/peer_multiples_sources.md`.
+- Assumptions and calculations: `data/`, `models/dcf_summary.md`.
+- Reconciliation checks: `data/reconciliation_notes.md`, `data/reconciliation_balance_sheet.md`, `data/reconciliation_cashflow.md`.

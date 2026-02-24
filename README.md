@@ -35,6 +35,12 @@ Fetch and cache SEC JSON into `research/sec/` with request logging.
 cargo run -- fetch-sec --cik 0000320193 --user-agent "Name email@domain.com"
 ```
 
+## Full pipeline (Rust + PowerShell)
+Run the end-to-end pipeline (fetch, extract, metrics, valuation, report, charts).
+```powershell
+cargo run -- run-pipeline --cik 0000320193 --user-agent "Name email@domain.com" --price 264.58 --as-of-date 2026-02-20
+```
+
 ## Charts (PowerShell)
 Generate PNG charts into `outputs/charts/`.
 ```powershell
@@ -81,3 +87,4 @@ Run these in order after setting a real SEC User-Agent.
 ## Next steps
 - Rust module for SEC fetch/caching has been added (`cargo run -- fetch-sec`).
 - Charts can be generated from `data/` via `scripts/build_charts.ps1`.
+- Peer multiples data is tracked in `data/peer_multiples.csv` with sources in `research/peer_multiples_sources.md`.

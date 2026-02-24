@@ -52,6 +52,49 @@ function New-LineChart {
     $chart.Dispose()
 }
 
+function New-BarChart {
+    param(
+        [string]$Title,
+        [string]$YAxisTitle,
+        [string[]]$Categories,
+        [hashtable]$SeriesMap,
+        [string]$OutPath
+    )
+
+    $chart = New-Object System.Windows.Forms.DataVisualization.Charting.Chart
+    $chart.Width = 1200
+    $chart.Height = 700
+
+    $chartArea = New-Object System.Windows.Forms.DataVisualization.Charting.ChartArea
+    $chartArea.AxisX.Title = "Company"
+    $chartArea.AxisX.Interval = 1
+    $chartArea.AxisY.Title = $YAxisTitle
+    $chart.ChartAreas.Add($chartArea) | Out-Null
+
+    $legend = New-Object System.Windows.Forms.DataVisualization.Charting.Legend
+    $legend.Docking = "Bottom"
+    $chart.Legends.Add($legend) | Out-Null
+
+    $chart.Titles.Add($Title) | Out-Null
+
+    foreach ($name in $SeriesMap.Keys) {
+        $series = New-Object System.Windows.Forms.DataVisualization.Charting.Series
+        $series.Name = $name
+        $series.ChartType = "Column"
+        $series.BorderWidth = 2
+        $series.Points.DataBindXY($Categories, $SeriesMap[$name])
+        $chart.Series.Add($series) | Out-Null
+    }
+
+    $dir = Split-Path -Parent $OutPath
+    if (-not (Test-Path $dir)) {
+        New-Item -ItemType Directory -Force -Path $dir | Out-Null
+    }
+
+    $chart.SaveImage($OutPath, "Png")
+    $chart.Dispose()
+}
+
 function Read-CsvSorted {
     param([string]$Path)
     return Import-Csv -Path $Path | Sort-Object -Property FiscalYear
@@ -62,6 +105,7 @@ $profit = Read-CsvSorted -Path (Join-Path $DataDir "metrics_profitability.csv")
 $balance = Read-CsvSorted -Path (Join-Path $DataDir "metrics_balance.csv")
 $cashflow = Read-CsvSorted -Path (Join-Path $DataDir "financials_cashflow.csv")
 $metricsCashflow = Read-CsvSorted -Path (Join-Path $DataDir "metrics_cashflow.csv")
+$peersPath = Join-Path $DataDir "peer_multiples.csv"
 
 $years = $income | ForEach-Object { [int]$_.FiscalYear }
 
@@ -135,3 +179,18 @@ New-LineChart `
         }
     } `
     -OutPath (Join-Path $OutDir "net_cash.png")
+
+if (Test-Path $peersPath) {
+    $peers = Import-Csv -Path $peersPath
+    $companies = $peers | ForEach-Object { $_.Company }
+    New-BarChart `
+        -Title "Peer Valuation Multiples (As of latest close)" `
+        -YAxisTitle "Multiple" `
+        -Categories $companies `
+        -SeriesMap @{
+            "P/E" = $peers | ForEach-Object { [double]$_.PE }
+            "EV/EBITDA" = $peers | ForEach-Object { [double]$_.EV_EBITDA }
+            "P/FCF" = $peers | ForEach-Object { [double]$_.P_FCF }
+        } `
+        -OutPath (Join-Path $OutDir "peer_multiples.png")
+}

@@ -35,6 +35,12 @@ Ambil dan cache JSON SEC ke `research/sec/` dengan log permintaan.
 cargo run -- fetch-sec --cik 0000320193 --user-agent "Name email@domain.com"
 ```
 
+## Pipeline lengkap (Rust + PowerShell)
+Jalankan pipeline end-to-end (fetch, ekstraksi, metrik, valuasi, laporan, grafik).
+```powershell
+cargo run -- run-pipeline --cik 0000320193 --user-agent "Name email@domain.com" --price 264.58 --as-of-date 2026-02-20
+```
+
 ## Grafik (PowerShell)
 Hasilkan grafik PNG ke `outputs/charts/`.
 ```powershell
@@ -81,3 +87,4 @@ Jalankan ini berurutan setelah mengatur User-Agent SEC yang valid.
 ## Langkah berikutnya
 - Modul Rust untuk pengambilan/cache SEC sudah ditambahkan (`cargo run -- fetch-sec`).
 - Grafik dapat dihasilkan dari `data/` melalui `scripts/build_charts.ps1`.
+- Data multiple peer disimpan di `data/peer_multiples.csv` dengan sumber di `research/peer_multiples_sources.md`.

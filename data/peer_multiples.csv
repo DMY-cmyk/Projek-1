@@ -1,0 +1,5 @@
+"Company","Ticker","AsOfDate","PE","EV_EBITDA","P_FCF","Source"
+"Apple","AAPL","2026-02-20","35.44","27.19","40.20","data/valuation_snapshot.csv"
+"Microsoft","MSFT","2026-02-23","24.06","16.48","36.88","stockanalysis.com"
+"Alphabet","GOOGL","2026-02-24","28.84","24.69","51.43","stockanalysis.com"
+"Samsung Electronics","SSUN","2026-02-24","27.71","12.53","32.45","stockanalysis.com (FRA:SSUN)"
