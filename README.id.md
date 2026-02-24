@@ -65,6 +65,12 @@ Periksa umur filing terbaru dan snapshot valuasi di `outputs/freshness_report.md
 .\scripts\check_data_freshness.ps1
 ```
 
+## Change log (PowerShell)
+Ringkas delta YoY ke `outputs/change_log.md`.
+```powershell
+.\scripts\build_change_log.ps1
+```
+
 ## Refresh multiple peer (PowerShell)
 Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
 ```powershell

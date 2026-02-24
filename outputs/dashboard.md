@@ -28,6 +28,9 @@ See outputs/key_events.md (run scripts/build_key_events.ps1).
 ## Data Freshness
 See outputs/freshness_report.md (run scripts/check_data_freshness.ps1).
 
+## Change Log
+See outputs/change_log.md (run scripts/build_change_log.ps1).
+
 ## Quarterly Inputs (Optional)
 If quarterly CSVs exist, drop them into data/quarterly_*.csv and re-run this script.
 Expected columns: Period, Revenue, GrossMargin, OperatingMargin, NetMargin, FCF.

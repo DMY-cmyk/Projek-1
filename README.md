@@ -65,6 +65,12 @@ Check how old the latest filings and valuation snapshot are in `outputs/freshnes
 .\scripts\check_data_freshness.ps1
 ```
 
+## Change log (PowerShell)
+Summarize year-over-year deltas into `outputs/change_log.md`.
+```powershell
+.\scripts\build_change_log.ps1
+```
+
 ## Peer multiples refresh (PowerShell)
 Fetch latest peer multiples (best-effort HTML parsing) into `data/peer_multiples.csv`.
 ```powershell

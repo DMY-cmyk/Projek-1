@@ -229,6 +229,7 @@ $report += '- Assumptions and calculations: `data/`, `models/dcf_summary.md`.'
 $report += '- Reconciliation checks: `data/reconciliation_notes.md`, `data/reconciliation_balance_sheet.md`, `data/reconciliation_cashflow.md`.'
 $report += '- Latest filings log: `outputs/key_events.md`.'
 $report += '- Data freshness: `outputs/freshness_report.md`.'
+$report += '- Change log: `outputs/change_log.md`.'
 
 $outDir = Split-Path $OutPath -Parent
 if (-not (Test-Path $outDir)) {
