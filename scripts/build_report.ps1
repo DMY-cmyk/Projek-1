@@ -240,6 +240,7 @@ $report += '- Health check: `outputs/health_check.md`.'
 $report += '- Summary JSON: `outputs/summary.json`.'
 $report += '- Export bundle: `outputs/export_bundle.zip`.'
 $report += '- Outputs manifest: `outputs/manifest.json`.'
+$report += '- CI run log: `outputs/run_log_ci.md`.'
 
 $outDir = Split-Path $OutPath -Parent
 if (-not (Test-Path $outDir)) {
