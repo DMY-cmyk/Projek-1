@@ -170,6 +170,12 @@ Generate referensi kolom di `outputs/data_dictionary.md`.
 ```powershell
 .\scripts\build_data_dictionary.ps1
 ```
+
+## Release notes (PowerShell)
+Ringkas perubahan terbaru di `outputs/release_notes.md`.
+```powershell
+.\scripts\build_release_notes.ps1
+```
 ## Refresh multiple peer (PowerShell)
 Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
 ```powershell

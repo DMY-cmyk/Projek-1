@@ -40,6 +40,7 @@ $steps.Add((Run-Step "Export bundle" "scripts/build_export_bundle.ps1")) | Out-N
 $steps.Add((Run-Step "Outputs manifest" "scripts/build_outputs_manifest.ps1")) | Out-Null
 $steps.Add((Run-Step "Sanity checks" "scripts/build_sanity_checks.ps1")) | Out-Null
 $steps.Add((Run-Step "Data dictionary" "scripts/build_data_dictionary.ps1")) | Out-Null
+$steps.Add((Run-Step "Release notes" "scripts/build_release_notes.ps1")) | Out-Null
 
 $log = @()
 $log += "# Report Pack Run Log"

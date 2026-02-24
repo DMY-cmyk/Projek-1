@@ -211,3 +211,4 @@ Key KPIs to monitor each quarter include total revenue growth, services mix, iPh
 - CI run log: `outputs/run_log_ci.md`.
 - Sanity checks: `outputs/sanity_checks.md`.
 - Data dictionary: `outputs/data_dictionary.md`.
+- Release notes: `outputs/release_notes.md`.

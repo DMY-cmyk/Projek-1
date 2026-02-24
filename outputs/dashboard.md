@@ -70,6 +70,9 @@ Validate basic relationships in outputs/sanity_checks.md (run scripts/build_sani
 ## Data Dictionary
 Column reference in outputs/data_dictionary.md (run scripts/build_data_dictionary.ps1).
 
+## Release Notes
+Latest changes in outputs/release_notes.md (run scripts/build_release_notes.ps1).
+
 ## Quarterly Inputs (Optional)
 If quarterly CSVs exist, drop them into data/quarterly_*.csv and re-run this script.
 Expected columns: Period, Revenue, GrossMargin, OperatingMargin, NetMargin, FCF.

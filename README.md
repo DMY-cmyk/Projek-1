@@ -170,6 +170,12 @@ Generate column reference in `outputs/data_dictionary.md`.
 ```powershell
 .\scripts\build_data_dictionary.ps1
 ```
+
+## Release notes (PowerShell)
+Summarize recent changes in `outputs/release_notes.md`.
+```powershell
+.\scripts\build_release_notes.ps1
+```
 ## Peer multiples refresh (PowerShell)
 Fetch latest peer multiples (best-effort HTML parsing) into `data/peer_multiples.csv`.
 ```powershell
