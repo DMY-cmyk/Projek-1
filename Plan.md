@@ -134,7 +134,7 @@ Last updated: 2026-02-24
 - All numbers reconcile to filings. (Completed; full reconciliation of all metrics, multiples, and DCF verified; see `data/reconciliation_notes.md`)
 - Units and currency are consistent. (Completed; USD billions)
 - Assumptions documented with dates. (Completed; report + DCF summary)
-- Charts labeled with source and period. (N/A; charts not produced)
+- Charts labeled with source and period. (Completed; `outputs/charts/` via `scripts/build_charts.ps1`)
 - Conclusions trace back to quantified evidence. (Completed; report references data tables)
 
 

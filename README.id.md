@@ -22,10 +22,23 @@ Workspace Rust yang berpusat pada rencana detail untuk menganalisis fundamental 
 - Toolchain Rust (cargo + rustc).
 - Di Windows, linker MSVC diperlukan untuk build dengan toolchain default.
 - PowerShell (untuk skrip analisis).
+- Di Windows, .NET charting (System.Windows.Forms.DataVisualization) dibutuhkan untuk merender grafik.
 
 ## Mulai cepat
 ```powershell
 cargo run
+```
+
+## Pengambilan API SEC (Rust)
+Ambil dan cache JSON SEC ke `research/sec/` dengan log permintaan.
+```powershell
+cargo run -- fetch-sec --cik 0000320193 --user-agent "Name email@domain.com"
+```
+
+## Grafik (PowerShell)
+Hasilkan grafik PNG ke `outputs/charts/`.
+```powershell
+.\scripts\build_charts.ps1
 ```
 
 ## Pipeline analisis (PowerShell)
@@ -66,5 +79,5 @@ Jalankan ini berurutan setelah mengatur User-Agent SEC yang valid.
 - Validasi data SEC terhadap filing dan catat permintaan API.
 
 ## Langkah berikutnya
-- Bangun modul Rust untuk mengambil dan meng-cache JSON API SEC.
-- Perluas narasi laporan menggunakan catatan di `research/`.
+- Modul Rust untuk pengambilan/cache SEC sudah ditambahkan (`cargo run -- fetch-sec`).
+- Grafik dapat dihasilkan dari `data/` melalui `scripts/build_charts.ps1`.

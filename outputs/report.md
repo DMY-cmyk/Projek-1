@@ -15,6 +15,10 @@ Source notes: `research/notes_business_overview.md`
 - The Company manages its business by geography: Americas, Europe, Greater China, Japan, Rest of Asia Pacific.
 - Distribution: direct channels (retail/online/direct sales) and indirect channels (carriers/resellers); FY2025 net sales mix was 40% direct and 60% indirect.
 
+The portfolio mix underscores a large device installed base that supports services revenue. Services are delivered primarily through Apple platforms (App Store, subscriptions, cloud, payments), while product cycles remain the main driver of absolute revenue changes. Geographic segmentation reflects exposure to macro and FX conditions across major regions, with the Americas and Europe providing the majority of sales.
+
+Strategy emphasis in the FY2025 10-K highlights pricing pressure, ongoing innovation and R&D, supply chain resilience, and continued services expansion. The business model is reinforced by ecosystem interdependence: services usage increases device stickiness, and device adoption expands the services addressable base.
+
 FY2025 net sales by product (USD billions):
 |Product|NetSales|
 |---|---|
@@ -72,6 +76,17 @@ Debt and liquidity notes (FY2025 10-K):
 |2022|122.151|10.708|89.402|14.841|
 |2021|104.038|11.085|85.971|14.467|
 
+## Charts
+Source: `data/*.csv` (derived from SEC data.sec.gov). Period: FY2021-FY2025. Generated with `scripts/build_charts.ps1`.
+
+![Revenue and Operating Income (USD Billions)](charts/revenue_operating_income.png)
+
+![Margins (Percent)](charts/margins.png)
+
+![Free Cash Flow and Capital Returns (USD Billions)](charts/fcf_capital_returns.png)
+
+![Net Cash (USD Billions)](charts/net_cash.png)
+
 ## Metrics
 ### Profitability
 |FiscalYear|GrossMargin|OperatingMargin|NetMargin|
@@ -115,10 +130,16 @@ Source notes: `research/notes_competitive_risks.md`
 - Component supply risks persist due to limited-source parts and competition for supply.
 - Geographic exposure introduces macro and FX sensitivity.
 
+Platform and regulatory exposure are structurally important because digital services depend on App Store distribution and on-device monetization. Changes to platform rules, privacy regulation, or payment policies could alter services economics. These risks are directional inferences from the 10-K risk factors and should be re-validated against the latest regulatory actions.
+
+Greater China remains a meaningful contributor to revenue (15.47% in FY2025) and experienced a YoY decline, which adds sensitivity to regional demand trends and competitive dynamics.
+
 ## Management and Governance
 Source notes: `research/notes_management_governance.md`
 - 2026 proxy lists eight director nominees, with the Board indicating all directors except the CEO are independent.
 - 2025 say-on-pay received 92% support.
+
+Committee composition in the 2026 proxy shows continued emphasis on independent oversight across audit/finance, compensation, and governance. Shareholder proposals in 2026 include a request for a China entanglement audit, indicating ongoing stakeholder focus on geopolitical and supply chain risk.
 
 ## Valuation Snapshot
 Data source: `data/valuation_snapshot.csv` and `research/market_price_source.txt`
@@ -151,6 +172,8 @@ Source notes: `research/notes_thesis_scenarios.md`
 - Bull: services mix expansion and stronger upgrade cycles drive higher growth.
 - Base: low single-digit growth with stable margins and continued capital returns.
 - Bear: price pressure and slower device demand compress margins and growth.
+
+Key KPIs to monitor each quarter include total revenue growth, services mix, iPhone cycle strength, and margin stability. Capital return pace (buybacks and dividends) is a key indicator of management confidence and capital discipline.
 
 ## Appendix
 - Data sources: `research/sec/`, `research/market_price_source.txt`

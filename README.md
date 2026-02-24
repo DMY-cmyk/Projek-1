@@ -22,10 +22,23 @@ Rust workspace centered on a detailed plan to analyze Apple Inc. fundamentals us
 - Rust toolchain (cargo + rustc).
 - On Windows, the MSVC linker is required to build with the default toolchain.
 - PowerShell (for the analysis scripts).
+- On Windows, .NET charting (System.Windows.Forms.DataVisualization) is needed to render charts.
 
 ## Quick start
 ```powershell
 cargo run
+```
+
+## SEC API fetch (Rust)
+Fetch and cache SEC JSON into `research/sec/` with request logging.
+```powershell
+cargo run -- fetch-sec --cik 0000320193 --user-agent "Name email@domain.com"
+```
+
+## Charts (PowerShell)
+Generate PNG charts into `outputs/charts/`.
+```powershell
+.\scripts\build_charts.ps1
 ```
 
 ## Analysis pipeline (PowerShell)
@@ -66,5 +79,5 @@ Run these in order after setting a real SEC User-Agent.
 - Validate SEC data against filings and log API requests.
 
 ## Next steps
-- Build a Rust module to fetch and cache SEC API JSON.
-- Expand report narrative using the notes in `research/`.
+- Rust module for SEC fetch/caching has been added (`cargo run -- fetch-sec`).
+- Charts can be generated from `data/` via `scripts/build_charts.ps1`.
