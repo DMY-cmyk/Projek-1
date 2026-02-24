@@ -58,6 +58,9 @@ Machine-readable snapshot in outputs/summary.json (run scripts/build_summary_jso
 ## Export Bundle
 Zip bundle in outputs/export_bundle.zip (run scripts/build_export_bundle.ps1).
 
+## Outputs Manifest
+Integrity manifest in outputs/manifest.json (run scripts/build_outputs_manifest.ps1).
+
 ## Quarterly Inputs (Optional)
 If quarterly CSVs exist, drop them into data/quarterly_*.csv and re-run this script.
 Expected columns: Period, Revenue, GrossMargin, OperatingMargin, NetMargin, FCF.

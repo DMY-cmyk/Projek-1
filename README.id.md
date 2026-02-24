@@ -146,6 +146,12 @@ Zip CSV dan output utama ke `outputs/export_bundle.zip`.
 ```powershell
 .\scripts\build_export_bundle.ps1
 ```
+
+## Outputs manifest (PowerShell)
+Tulis hash dan ukuran ke `outputs/manifest.json`.
+```powershell
+.\scripts\build_outputs_manifest.ps1
+```
 ## Refresh multiple peer (PowerShell)
 Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
 ```powershell

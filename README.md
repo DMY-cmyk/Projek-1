@@ -146,6 +146,12 @@ Zip CSVs and key outputs into `outputs/export_bundle.zip`.
 ```powershell
 .\scripts\build_export_bundle.ps1
 ```
+
+## Outputs manifest (PowerShell)
+Write hashes and sizes to `outputs/manifest.json`.
+```powershell
+.\scripts\build_outputs_manifest.ps1
+```
 ## Peer multiples refresh (PowerShell)
 Fetch latest peer multiples (best-effort HTML parsing) into `data/peer_multiples.csv`.
 ```powershell

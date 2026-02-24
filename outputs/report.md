@@ -207,3 +207,4 @@ Key KPIs to monitor each quarter include total revenue growth, services mix, iPh
 - Health check: `outputs/health_check.md`.
 - Summary JSON: `outputs/summary.json`.
 - Export bundle: `outputs/export_bundle.zip`.
+- Outputs manifest: `outputs/manifest.json`.
