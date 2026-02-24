@@ -176,6 +176,12 @@ Ringkas perubahan terbaru di `outputs/release_notes.md`.
 ```powershell
 .\scripts\build_release_notes.ps1
 ```
+
+## Benchmark snapshot (PowerShell)
+Hasilkan snapshot peer di `outputs/benchmark_snapshot.md`.
+```powershell
+.\scripts\build_benchmark_snapshot.ps1
+```
 ## Refresh multiple peer (PowerShell)
 Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
 ```powershell

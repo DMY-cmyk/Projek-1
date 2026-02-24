@@ -176,6 +176,12 @@ Summarize recent changes in `outputs/release_notes.md`.
 ```powershell
 .\scripts\build_release_notes.ps1
 ```
+
+## Benchmark snapshot (PowerShell)
+Generate peer snapshot in `outputs/benchmark_snapshot.md`.
+```powershell
+.\scripts\build_benchmark_snapshot.ps1
+```
 ## Peer multiples refresh (PowerShell)
 Fetch latest peer multiples (best-effort HTML parsing) into `data/peer_multiples.csv`.
 ```powershell

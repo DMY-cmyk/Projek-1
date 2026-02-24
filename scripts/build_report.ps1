@@ -244,6 +244,7 @@ $report += '- CI run log: `outputs/run_log_ci.md`.'
 $report += '- Sanity checks: `outputs/sanity_checks.md`.'
 $report += '- Data dictionary: `outputs/data_dictionary.md`.'
 $report += '- Release notes: `outputs/release_notes.md`.'
+$report += '- Benchmark snapshot: `outputs/benchmark_snapshot.md`.'
 
 $outDir = Split-Path $OutPath -Parent
 if (-not (Test-Path $outDir)) {
