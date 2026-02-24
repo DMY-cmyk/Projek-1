@@ -164,6 +164,12 @@ Validate basic relationships in `outputs/sanity_checks.md`.
 ```powershell
 .\scripts\build_sanity_checks.ps1
 ```
+
+## Data dictionary (PowerShell)
+Generate column reference in `outputs/data_dictionary.md`.
+```powershell
+.\scripts\build_data_dictionary.ps1
+```
 ## Peer multiples refresh (PowerShell)
 Fetch latest peer multiples (best-effort HTML parsing) into `data/peer_multiples.csv`.
 ```powershell

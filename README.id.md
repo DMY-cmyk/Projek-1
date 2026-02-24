@@ -164,6 +164,12 @@ Validasi relasi dasar di `outputs/sanity_checks.md`.
 ```powershell
 .\scripts\build_sanity_checks.ps1
 ```
+
+## Data dictionary (PowerShell)
+Generate referensi kolom di `outputs/data_dictionary.md`.
+```powershell
+.\scripts\build_data_dictionary.ps1
+```
 ## Refresh multiple peer (PowerShell)
 Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
 ```powershell

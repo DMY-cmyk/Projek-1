@@ -67,6 +67,9 @@ CI-friendly run log in outputs/run_log_ci.md (run scripts/build_report_pack_ci.p
 ## Sanity Checks
 Validate basic relationships in outputs/sanity_checks.md (run scripts/build_sanity_checks.ps1).
 
+## Data Dictionary
+Column reference in outputs/data_dictionary.md (run scripts/build_data_dictionary.ps1).
+
 ## Quarterly Inputs (Optional)
 If quarterly CSVs exist, drop them into data/quarterly_*.csv and re-run this script.
 Expected columns: Period, Revenue, GrossMargin, OperatingMargin, NetMargin, FCF.
