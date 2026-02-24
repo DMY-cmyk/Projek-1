@@ -34,6 +34,9 @@ See outputs/change_log.md (run scripts/build_change_log.ps1).
 ## Drift Alerts
 See outputs/drift_alerts.md (run scripts/build_drift_alerts.ps1).
 
+## Scenario Stress
+See outputs/scenario_stress.md (run scripts/build_scenario_stress.ps1).
+
 ## Quarterly Inputs (Optional)
 If quarterly CSVs exist, drop them into data/quarterly_*.csv and re-run this script.
 Expected columns: Period, Revenue, GrossMargin, OperatingMargin, NetMargin, FCF.

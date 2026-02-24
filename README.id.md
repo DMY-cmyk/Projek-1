@@ -77,6 +77,12 @@ Tandai outlier dibanding rata-rata 5 tahun di `outputs/drift_alerts.md`.
 .\scripts\build_drift_alerts.ps1
 ```
 
+## Scenario stress tester (PowerShell)
+Hasilkan tabel stress sederhana di `outputs/scenario_stress.md`.
+```powershell
+.\scripts\build_scenario_stress.ps1
+```
+
 ## Refresh multiple peer (PowerShell)
 Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
 ```powershell

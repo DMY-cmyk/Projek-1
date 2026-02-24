@@ -77,6 +77,12 @@ Flag outliers vs 5-year averages in `outputs/drift_alerts.md`.
 .\scripts\build_drift_alerts.ps1
 ```
 
+## Scenario stress tester (PowerShell)
+Generate a simple stress table in `outputs/scenario_stress.md`.
+```powershell
+.\scripts\build_scenario_stress.ps1
+```
+
 ## Peer multiples refresh (PowerShell)
 Fetch latest peer multiples (best-effort HTML parsing) into `data/peer_multiples.csv`.
 ```powershell
