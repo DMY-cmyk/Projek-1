@@ -232,6 +232,7 @@ $report += '- Data freshness: `outputs/freshness_report.md`.'
 $report += '- Change log: `outputs/change_log.md`.'
 $report += '- Drift alerts: `outputs/drift_alerts.md`.'
 $report += '- Scenario stress: `outputs/scenario_stress.md`.'
+$report += '- Report pack log: `outputs/run_log.md`.'
 
 $outDir = Split-Path $OutPath -Parent
 if (-not (Test-Path $outDir)) {

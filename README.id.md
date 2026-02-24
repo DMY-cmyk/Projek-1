@@ -83,6 +83,12 @@ Hasilkan tabel stress sederhana di `outputs/scenario_stress.md`.
 .\scripts\build_scenario_stress.ps1
 ```
 
+## Report pack (PowerShell)
+Jalankan semua generator dan tulis run log di `outputs/run_log.md`.
+```powershell
+.\scripts\build_report_pack.ps1
+```
+
 ## Refresh multiple peer (PowerShell)
 Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
 ```powershell
