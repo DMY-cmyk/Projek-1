@@ -38,6 +38,7 @@ $steps.Add((Run-Step "Health check" "scripts/build_health_check.ps1")) | Out-Nul
 $steps.Add((Run-Step "Summary JSON" "scripts/build_summary_json.ps1")) | Out-Null
 $steps.Add((Run-Step "Export bundle" "scripts/build_export_bundle.ps1")) | Out-Null
 $steps.Add((Run-Step "Outputs manifest" "scripts/build_outputs_manifest.ps1")) | Out-Null
+$steps.Add((Run-Step "Sanity checks" "scripts/build_sanity_checks.ps1")) | Out-Null
 
 $log = @()
 $log += "# Report Pack Run Log"

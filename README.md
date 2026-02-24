@@ -158,6 +158,12 @@ Run all generators and fail on error; log to `outputs/run_log_ci.md`.
 ```powershell
 .\scripts\build_report_pack_ci.ps1
 ```
+
+## Sanity checks (PowerShell)
+Validate basic relationships in `outputs/sanity_checks.md`.
+```powershell
+.\scripts\build_sanity_checks.ps1
+```
 ## Peer multiples refresh (PowerShell)
 Fetch latest peer multiples (best-effort HTML parsing) into `data/peer_multiples.csv`.
 ```powershell

@@ -64,6 +64,9 @@ Integrity manifest in outputs/manifest.json (run scripts/build_outputs_manifest.
 ## Report Pack (CI)
 CI-friendly run log in outputs/run_log_ci.md (run scripts/build_report_pack_ci.ps1).
 
+## Sanity Checks
+Validate basic relationships in outputs/sanity_checks.md (run scripts/build_sanity_checks.ps1).
+
 ## Quarterly Inputs (Optional)
 If quarterly CSVs exist, drop them into data/quarterly_*.csv and re-run this script.
 Expected columns: Period, Revenue, GrossMargin, OperatingMargin, NetMargin, FCF.
