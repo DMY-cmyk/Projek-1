@@ -47,6 +47,12 @@ Hasilkan grafik PNG ke `outputs/charts/`.
 .\scripts\build_charts.ps1
 ```
 
+## Dashboard (PowerShell)
+Hasilkan dashboard monitoring ringan di `outputs/dashboard.md`.
+```powershell
+.\scripts\build_dashboard.ps1
+```
+
 ## Refresh multiple peer (PowerShell)
 Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
 ```powershell

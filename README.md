@@ -47,6 +47,12 @@ Generate PNG charts into `outputs/charts/`.
 .\scripts\build_charts.ps1
 ```
 
+## Dashboard (PowerShell)
+Generate a lightweight monitoring dashboard in `outputs/dashboard.md`.
+```powershell
+.\scripts\build_dashboard.ps1
+```
+
 ## Peer multiples refresh (PowerShell)
 Fetch latest peer multiples (best-effort HTML parsing) into `data/peer_multiples.csv`.
 ```powershell
