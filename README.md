@@ -95,6 +95,12 @@ Fetch SEC data and run the full report pack in one command.
 .\scripts\refresh_all.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
 ```
 
+## SEC fetch with retry (PowerShell)
+Retry SEC fetch with exponential backoff and log errors to `outputs/fetch_errors.md`.
+```powershell
+.\scripts\fetch_sec_retry.ps1 -UserAgent "Name email@domain.com" -MaxAttempts 3 -BaseDelaySeconds 5
+```
+
 ## One-command refresh (dry run)
 Validate inputs and print planned steps without network calls.
 ```powershell

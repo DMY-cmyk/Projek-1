@@ -13,7 +13,7 @@ if (-not $UserAgent -or $UserAgent.Trim().Length -lt 6) {
 }
 
 Write-Host "Refreshing SEC sources..."
-& powershell.exe -ExecutionPolicy Bypass -File scripts/fetch_sec_sources.ps1 -UserAgent $UserAgent
+& powershell.exe -ExecutionPolicy Bypass -File scripts/fetch_sec_retry.ps1 -UserAgent $UserAgent
 
 Write-Host "Extracting company facts..."
 $factsPath = Get-ChildItem -Path research/sec -Filter "companyfacts_*.json" | Sort-Object -Property LastWriteTime -Descending | Select-Object -First 1
