@@ -95,6 +95,12 @@ Ambil data SEC dan jalankan report pack dalam satu perintah.
 .\scripts\refresh_all.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
 ```
 
+## One-command refresh (dry run)
+Validasi input dan tampilkan langkah yang akan dijalankan tanpa network call.
+```powershell
+.\scripts\refresh_all_dryrun.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
+```
+
 ## Refresh multiple peer (PowerShell)
 Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
 ```powershell
