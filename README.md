@@ -1,5 +1,5 @@
 # Projek-1
-Docs updated: 2026-02-20
+Docs updated: 2026-02-23
 
 Rust workspace centered on a detailed plan to analyze Apple Inc. fundamentals using SEC `data.sec.gov` APIs. The code is a minimal starter binary and can be expanded into a data-fetching and analysis tool.
 
@@ -44,7 +44,14 @@ Run these in order after setting a real SEC User-Agent.
 - `data/metrics_*.csv` derived metrics (margins, growth, liquidity, cash flow).
 - `data/valuation_snapshot.csv` valuation multiples snapshot.
 - `data/validation_report.txt` data health checks.
+- `data/tag_validation_report.txt` SEC tag unit/period checks.
+- `data/reconciliation_notes.md` net sales reconciliation notes.
+- `data/one_time_items_notes.md` notable one-time items from 10-K.
+- `data/reconciliation_balance_sheet.md` balance sheet equation checks.
+- `data/reconciliation_cashflow.md` cash flow change vs net cash flow checks.
 - `outputs/report.md` draft report assembled from tables.
+- `models/dcf_base_case.csv` and `models/dcf_summary.md` illustrative DCF.
+- `research/notes_debt_liquidity.md` debt maturity and interest sensitivity notes.
 
 ## Troubleshooting
 - If SEC requests fail, ensure the User-Agent is a real name + email and try again.

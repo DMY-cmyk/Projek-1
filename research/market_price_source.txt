@@ -1,4 +1,5 @@
 Snapshot price source
-Date: 2026-02-06
-Price: 278.12 (USD)
-Source: https://stockanalysis.com/stocks/aapl/
+Date: 2026-02-20 (close)
+Price: 264.58 (USD)
+Source: https://finance.yahoo.com/quote/AAPL/history/
+Note: Updated during 2026-02-23 run; uses last available close price.

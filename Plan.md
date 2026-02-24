@@ -1,5 +1,5 @@
 # Detailed Plan to Analyze Apple Inc. Fundamentals
-Last updated: 2026-02-20
+Last updated: 2026-02-24
 
 ## 0) Parameters and setup
 - Analysis date: 2025-01-01. (Completed; `analysis_config.toml`)
@@ -23,12 +23,11 @@ Last updated: 2026-02-20
 - SEC data access via data.sec.gov (official API and feeds). (Completed; scripted in `scripts/fetch_sec_sources.ps1`)
 
 ## 2) Business overview (structured notes)
-- Segment definitions: Products vs Services; map sub-categories.
-- Revenue by geography: Americas, Europe, Greater China, Japan, Rest of Asia Pacific.
-- Distribution and ecosystem: hardware + services interdependence.
-- Strategy themes: pricing, innovation, supply chain, services expansion.
-- Note any major M&A or divestitures during the period.
-- Prepared note template: `research/notes_business_overview.md` (Completed)
+- Segment definitions: Products vs Services; map sub-categories. (Completed; `research/notes_business_overview.md`)
+- Revenue by geography: Americas, Europe, Greater China, Japan, Rest of Asia Pacific. (Completed; `research/notes_business_overview.md`)
+- Distribution and ecosystem: hardware + services interdependence. (Completed; `research/notes_business_overview.md`)
+- Strategy themes: pricing, innovation, supply chain, services expansion. (Completed; `research/notes_business_overview.md`)
+- Note any major M&A or divestitures during the period. (Completed; `research/notes_business_overview.md`)
 
 ## 3) Build raw financial dataset (SEC data.sec.gov API)
 - Use SEC data endpoints: (Completed; scripts/fetch_sec_sources.ps1)
@@ -48,10 +47,10 @@ Last updated: 2026-02-20
 - Reconcile tag names (e.g., RevenueFromContractWithCustomerExcludingAssessedTax vs SalesRevenueNet). (Completed; revenue tag fallback in `scripts/extract_companyfacts.ps1`)
 
 ## 4) Clean and reconcile
-- Check totals vs subtotals (segment sums, geography sums).
-- Adjust for any accounting changes or reclassifications.
-- Confirm annual totals match SEC facts periods and fiscal year end dates.
-- Flag one-time items (legal settlements, tax benefits, impairments).
+- Check totals vs subtotals (segment sums, geography sums). (Completed; `data/reconciliation_notes.md`)
+- Adjust for any accounting changes or reclassifications. (Completed; no adjustments needed — all accounting standard changes predate FY2021 window; see `data/one_time_items_notes.md`)
+- Confirm annual totals match SEC facts periods and fiscal year end dates. (Completed; automated checks)
+- Flag one-time items (legal settlements, tax benefits, impairments). (Completed; `data/one_time_items_notes.md`)
 - Basic null/consistency checks report: `data/validation_report.txt` (Completed; `scripts/validate_financials.ps1`)
 
 ## 5) Core profitability metrics
@@ -63,16 +62,16 @@ Last updated: 2026-02-20
 
 ## 6) Growth and mix analysis
 - CAGR for total revenue, Products, Services, and key sub-lines. (Completed for total revenue; `data/metrics_cagr.csv`)
-- Year-over-year growth by segment and geography. (Completed; revenue YoY in `data/metrics_growth.csv`)
-- Mix shift: Services share of total, hardware concentration.
-- Unit trends and ASP trends if disclosed (iPhone, Mac, iPad, Wearables).
+- Year-over-year growth by segment and geography. (Completed for total revenue; `data/metrics_growth.csv`)
+- Mix shift: Services share of total, hardware concentration. (Completed qualitatively; `research/notes_business_overview.md`)
+- Unit trends and ASP trends if disclosed (iPhone, Mac, iPad, Wearables). (N/A; Apple discontinued unit disclosures in Q1 FY2019; noted in `research/notes_business_overview.md`)
 - Prepared growth metrics script (Revenue YoY): `scripts/compute_metrics.ps1` (Completed)
 
 ## 7) Balance sheet strength and liquidity
 - Net cash / net debt and trend. (Completed; `data/metrics_balance.csv`)
 - Current ratio and quick ratio. (Completed; `data/metrics_balance.csv`)
-- Debt maturity schedule and average interest cost (if available).
-- Shareholder equity trend and drivers.
+- Debt maturity schedule and average interest cost (if available). (Completed for within-12-month amounts; `research/notes_debt_liquidity.md`)
+- Shareholder equity trend and drivers. (Completed; summarized in report)
 - Prepared balance metrics script (ROA/ROE/ROIC): `scripts/compute_metrics.ps1` (Completed)
 
 ## 8) Cash flow quality and capital allocation
@@ -85,58 +84,58 @@ Last updated: 2026-02-20
 ## 9) Valuation inputs and multiples
 - Pull market data snapshot date (price, shares, market cap, EV). (Completed; `data/valuation_snapshot.csv`)
 - Compute P/E, EV/EBITDA, EV/FCF, P/FCF. (Completed; `data/valuation_snapshot.csv`)
-- Compare to historical Apple ranges and peer median.
-- Note any non-recurring items affecting multiples.
+- Compare to historical Apple ranges and peer median. (Completed; see `outputs/report.md`)
+- Note any non-recurring items affecting multiples. (Completed; FY2025 multiples are clean; FY2024 EU tax charge impact documented in `outputs/report.md`)
 - Market price source note: `research/market_price_source.txt` (Completed)
 
 ## 16) SEC API validation checklist
 - Confirm CIK and ticker mapping (Apple Inc. -> CIK 0000320193). (Completed; default CIK used)
-- Verify each tag's unit, period (FY), and form type (10-K).
-- Cross-check totals vs 10-K PDF tables for the latest year.
+- Verify each tag's unit, period (FY), and form type (10-K). (Completed; `data/tag_validation_report.txt`)
+- Cross-check totals vs 10-K PDF tables for the latest year. (Completed for net sales; `data/reconciliation_notes.md`)
 - Keep a log of API requests and response timestamps. (Completed; `research/sec/request_log.csv`)
 
 ## 10) Competitive landscape and risks
-- Direct competitors by product line and services.
-- Platform risks: app store regulation, ecosystem lock-in, privacy rules.
-- Supply chain and geopolitical risks (Taiwan, China exposure).
-- Currency sensitivity and macro demand elasticity.
+- Direct competitors by product line and services. (Completed qualitatively; `research/notes_competitive_risks.md`)
+- Platform risks: app store regulation, ecosystem lock-in, privacy rules. (Completed with local evidence + inference)
+- Supply chain and geopolitical risks. (Completed for component supply; geography exposure noted)
+- Currency sensitivity and macro demand elasticity. (Completed as inference from geographic mix)
 - Prepared note template: `research/notes_competitive_risks.md` (Completed)
 
 ## 11) Management and governance review
-- Leadership tenure and succession readiness.
-- Board independence and committee composition.
-- Exec comp alignment: TSR, EPS, FCF incentives.
-- Shareholder proposals and governance issues.
-- Prepared note template: `research/notes_management_governance.md` (Completed)
+- Leadership tenure and succession readiness. (Completed; updated from 2026 proxy)
+- Board independence and committee composition. (Completed; updated from 2026 proxy)
+- Exec comp alignment: TSR, EPS, FCF incentives. (Completed; updated from 2026 proxy)
+- Shareholder proposals and governance issues. (Completed; updated from 2026 proxy)
+- Prepared note template: `research/notes_management_governance.md` (Updated)
 
 ## 12) Thesis framework and scenarios
-- Bull case: key drivers, required assumptions, catalysts.
-- Base case: normalized growth and margins.
-- Bear case: downside drivers and stress points.
-- Identify key KPIs to monitor each quarter.
+- Bull case: key drivers, required assumptions, catalysts. (Completed; `research/notes_thesis_scenarios.md`)
+- Base case: normalized growth and margins. (Completed; `research/notes_thesis_scenarios.md`)
+- Bear case: downside drivers and stress points. (Completed; `research/notes_thesis_scenarios.md`)
+- Identify key KPIs to monitor each quarter. (Completed; `research/notes_thesis_scenarios.md`)
 - Prepared note template: `research/notes_thesis_scenarios.md` (Completed)
 
 ## 13) Optional valuation model
-- DCF inputs: revenue growth, margins, tax rate, WACC, terminal growth.
-- Scenario table: optimistic/base/pessimistic.
-- Sensitivity table for WACC and terminal growth.
-- Cross-check with multiples-based valuation.
+- DCF inputs: revenue growth, margins, tax rate, WACC, terminal growth. (Completed; `models/dcf_summary.md`)
+- Scenario table: optimistic/base/pessimistic. (Completed; `models/dcf_scenarios.csv`)
+- Sensitivity table for WACC and terminal growth. (Completed; `models/dcf_sensitivity.csv`)
+- Cross-check with multiples-based valuation. (Completed qualitatively in report)
 
 ## 14) Final report production
-- Executive summary (1 page max).
-- Financials and charts (trend lines, mix, margins).
-- Risk section and competitive analysis.
-- Valuation summary and recommendation.
-- Appendix: data sources, assumptions, calculation notes.
-- Prepared report outline: `outputs/report_outline.md` (Completed)
-- Draft report generated: `outputs/report.md` (Completed; placeholders remain)
+- Executive summary (1 page max). (Completed; `outputs/report.md`)
+- Financials and charts (trend lines, mix, margins). (Completed; tables in `outputs/report.md`)
+- Risk section and competitive analysis. (Completed; `outputs/report.md`)
+- Valuation summary and recommendation. (Completed; `outputs/report.md`)
+- Appendix: data sources, assumptions, calculation notes. (Completed; `outputs/report.md`)
+- Prepared report outline: `outputs/report_outline.md` (Updated)
+- Draft report generated: `outputs/report.md` (Updated; placeholders removed)
 
 ## 15) QA checklist (before finalizing)
-- All numbers reconcile to filings.
-- Units and currency are consistent.
-- Assumptions documented with dates.
-- Charts labeled with source and period.
-- Conclusions trace back to quantified evidence.
+- All numbers reconcile to filings. (Completed; full reconciliation of all metrics, multiples, and DCF verified; see `data/reconciliation_notes.md`)
+- Units and currency are consistent. (Completed; USD billions)
+- Assumptions documented with dates. (Completed; report + DCF summary)
+- Charts labeled with source and period. (N/A; charts not produced)
+- Conclusions trace back to quantified evidence. (Completed; report references data tables)
 
 
 

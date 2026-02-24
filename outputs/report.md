@@ -1,10 +1,39 @@
-﻿# Apple Fundamentals Report
+# Apple Fundamentals Report
 
 ## Executive Summary
-- TODO: Summarize key takeaways.
+- FY2025 revenue was $416.161B with YoY growth of 6.43%.
+- Profitability remained strong with FY2025 gross margin 46.9%, operating margin 32.0%, and net margin 26.9%.
+- FY2025 free cash flow was $98.767B with FCF conversion of 0.882.
+- Net cash at FY2025 was $33.763B; liquidity ratios remained below 1.0 (current ratio 0.893).
+- Capital returns remained large (FY2025 buybacks $90.711B, dividends $15.421B).
+- Valuation snapshot (2026-02-20 close) implies elevated multiples vs cash flow yields.
+- A simplified DCF base case produces an illustrative equity value per share below the snapshot price, implying higher growth/margins are priced in.
 
 ## Business Overview
-- See esearch/notes_business_overview.md for structured notes.
+Source notes: `research/notes_business_overview.md`
+- Apple sells hardware (iPhone, Mac, iPad, wearables, home devices, accessories) and services (advertising, AppleCare, cloud services, digital content, payment services).
+- The Company manages its business by geography: Americas, Europe, Greater China, Japan, Rest of Asia Pacific.
+- Distribution: direct channels (retail/online/direct sales) and indirect channels (carriers/resellers); FY2025 net sales mix was 40% direct and 60% indirect.
+
+FY2025 net sales by product (USD billions):
+|Product|NetSales|
+|---|---|
+|iPhone|209.586|
+|Mac|33.708|
+|iPad|28.023|
+|Wearables, Home and Accessories|35.686|
+|Services|109.158|
+|Total|416.161|
+
+FY2025 net sales by geography (USD billions):
+|Region|NetSales|
+|---|---|
+|Americas|178.353|
+|Europe|111.032|
+|Greater China|64.377|
+|Japan|28.703|
+|Rest of Asia Pacific|33.696|
+|Total|416.161|
 
 ## Financials
 ### Income Statement (USD billions)
@@ -16,14 +45,23 @@
 |2022|394.328|170.782|119.437|99.803|
 |2021|365.817|152.836|108.949|94.68|
 
+One-time item note:
+- FY2024 included a one-time net income tax charge of $10.2B related to the EU State Aid decision (see `data/one_time_items_notes.md`).
+
 ### Balance Sheet (USD billions)
 |FiscalYear|CashAndEquivalents|MarketableSecurities|MarketableSecuritiesNoncurrent|TotalDebt|TotalEquity|
 |---|---|---|---|---|---|
-|2025|35.934|18.763|77.723||73.733|
-|2024|29.943|35.228|91.479||56.95|
-|2023|29.965|31.59|100.544||62.146|
-|2022|23.646|24.658|120.805||50.672|
-|2021|34.94|27.699|127.877||63.09|
+|2025|35.934|18.763|77.723|98.657|73.733|
+|2024|29.943|35.228|91.479|106.629|56.95|
+|2023|29.965|31.59|100.544|111.088|62.146|
+|2022|23.646|24.658|120.805|120.069|50.672|
+|2021|34.94|27.699|127.877|124.719|63.09|
+
+Debt and liquidity notes (FY2025 10-K):
+- Fixed-rate notes outstanding: $91.3B with $12.4B due within 12 months.
+- Future interest payments on notes: $37.0B total, $2.6B due within 12 months.
+- Commercial paper outstanding: $8.0B due within 12 months.
+- Interest rate sensitivity: +100 bps implies +$129M annual interest expense for term debt.
 
 ### Cash Flow (USD billions)
 |FiscalYear|CFO|Capex|Buyback|Dividends|
@@ -56,34 +94,65 @@
 ### Balance Sheet and Liquidity
 |FiscalYear|ROA|ROE|ROIC|NetCash|CurrentRatio|QuickRatio|
 |---|---|---|---|---|---|---|
-|2025|0.3118|1.5191|3.5199|132.42|0.8933|0.8588|
-|2024|0.2568|1.6459|4.5624|156.65|0.8673|0.826|
-|2023|0.2751|1.5608|3.5518|162.099|0.988|0.9444|
-|2022|0.2829|1.9696|4.4193|169.109|0.8794|0.8472|
-|2021|0.2697|1.5007|3.8703|190.516|1.0746|1.0221|
+|2025|0.3118|1.5191|0.975|33.763|0.8933|0.8588|
+|2024|0.2568|1.6459|0.922|50.021|0.8673|0.826|
+|2023|0.2751|1.5608|0.7978|51.011|0.988|0.9444|
+|2022|0.2829|1.9696|0.812|49.04|0.8794|0.8472|
+|2021|0.2697|1.5007|0.7127|65.797|1.0746|1.0221|
 
 ### Cash Flow Quality
 |FiscalYear|FCF|FCFConversion|CapexPctRevenue|EBITDA|EBITDAMargin|
 |---|---|---|---|---|---|
-|2025|98.767|0.8818|0.0306|||
-|2024|108.807|1.1608|0.0242|||
-|2023|99.584|1.0267|0.0286|||
-|2022|111.443|1.1166|0.0272|||
-|2021|92.953|0.9818|0.0303|||
-
-## Valuation Snapshot
-|AsOfDate|Price|MarketCapBillions|EnterpriseValueBillions|PE|EV_EBITDA|EV_FCF|P_FCF|BuybackYield|DividendYield|PayoutRatio|TotalPayoutRatio|
-|---|---|---|---|---|---|---|---|---|---|---|---|
-|2026-02-06|278.12|4173.1072|4040.6872|37.2566||40.9113|42.252|0.0217|0.0037|0.1377|0.9475|
+|2025|98.767|0.8818|0.0306|144.748|0.3478|
+|2024|108.807|1.1608|0.0242|134.661|0.3444|
+|2023|99.584|1.0267|0.0286|125.82|0.3283|
+|2022|111.443|1.1166|0.0272|130.541|0.331|
+|2021|92.953|0.9818|0.0303|120.233|0.3287|
 
 ## Competitive Landscape and Risks
-- See esearch/notes_competitive_risks.md.
+Source notes: `research/notes_competitive_risks.md`
+- Competitive intensity is high across hardware and services, with aggressive pricing and short product cycles.
+- Component supply risks persist due to limited-source parts and competition for supply.
+- Geographic exposure introduces macro and FX sensitivity.
 
 ## Management and Governance
-- See esearch/notes_management_governance.md.
+Source notes: `research/notes_management_governance.md`
+- 2026 proxy lists eight director nominees, with the Board indicating all directors except the CEO are independent.
+- 2025 say-on-pay received 92% support.
+
+## Valuation Snapshot
+Data source: `data/valuation_snapshot.csv` and `research/market_price_source.txt`
+|AsOfDate|Price|MarketCapBillions|EnterpriseValueBillions|PE|EV_EBITDA|EV_FCF|P_FCF|BuybackYield|DividendYield|PayoutRatio|TotalPayoutRatio|
+|---|---|---|---|---|---|---|---|---|---|---|---|
+|2026-02-20|264.58|3969.9435|3936.1805|35.4428|27.1933|39.8532|40.195|0.0228|0.0039|0.1377|0.9475|
+
+## Non-Recurring Items and Multiples
+- **FY2025 (latest year, used for snapshot multiples):** No material one-time items identified. The P/E of 35.4 and other multiples reflect clean operating earnings.
+- **FY2024 impact on trailing comparisons:** The $10.2B one-time EU State Aid tax charge reduced FY2024 reported net income to $93.7B. Excluding the charge, adjusted FY2024 net income would be ~$103.9B. This means:
+  - Reported FY2024→FY2025 net income growth appears +19.5%, but adjusted growth is ~+7.8%.
+  - FY2024 FCF conversion of 1.16x (vs. typical ~1.0x) is inflated because the tax charge reduced reported net income while cash flow was unaffected (the $15.8B payment to Ireland occurred in FY2024 Q4 but was classified as an investing outflow per the escrow arrangement).
+- **Conclusion:** Current snapshot multiples (based on FY2025) are not distorted by one-time items. However, YoY growth comparisons vs FY2024 should be interpreted with the EU tax charge in mind.
+
+## Valuation Context
+- Peer median multiples (Apple, Microsoft, Alphabet, Samsung): P/E 27.85, EV/EBITDA 20.74, P/FCF 35.39.
+- Apple current multiples vs peer median: P/E and EV/EBITDA remain above the peer median; P/FCF is also above median.
+- Historical context: Macrotrends provides multi-year series for Apple P/E and price-to-free-cash-flow; use those charts for historical range context.
+
+## DCF Base Case (Illustrative)
+Source: `models/dcf_summary.md`, `models/dcf_scenarios.csv`, `models/dcf_sensitivity.csv`
+- Equity value per share (illustrative): $141.61
+- Key assumptions: 3% revenue growth, 31.5% EBIT margin, 8.0% WACC, 2.5% terminal growth.
+- This DCF is simplified and intended as a sensitivity anchor rather than a definitive valuation.
+- Scenario range (bull/base/bear): $194.05 / $141.61 / $96.11 per share.
+- The 2026-02-20 close price of $264.58 is above the base and bull scenarios, implying the market is pricing in higher growth or margins than the base case.
 
 ## Thesis and Scenarios
-- See esearch/notes_thesis_scenarios.md.
+Source notes: `research/notes_thesis_scenarios.md`
+- Bull: services mix expansion and stronger upgrade cycles drive higher growth.
+- Base: low single-digit growth with stable margins and continued capital returns.
+- Bear: price pressure and slower device demand compress margins and growth.
 
 ## Appendix
-- Data sources: esearch/sec/, esearch/market_price_source.txt.
+- Data sources: `research/sec/`, `research/market_price_source.txt`
+- Assumptions and calculations: `data/`, `models/dcf_summary.md`
+- Reconciliation checks: `data/reconciliation_notes.md`, `data/reconciliation_balance_sheet.md`, `data/reconciliation_cashflow.md`
