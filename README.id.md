@@ -113,6 +113,13 @@ Ringkas output utama di `outputs/quick_review.md`.
 .\scripts\build_quick_review.ps1
 ```
 
+## Cleanup (PowerShell)
+Dry-run pembersihan JSON SEC dan run log lama; gunakan `-Execute` untuk menghapus.
+```powershell
+.\scripts\cleanup_runs.ps1
+.\scripts\cleanup_runs.ps1 -Execute
+```
+
 ## Refresh multiple peer (PowerShell)
 Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
 ```powershell

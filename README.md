@@ -113,6 +113,13 @@ Summarize key outputs in `outputs/quick_review.md`.
 .\scripts\build_quick_review.ps1
 ```
 
+## Cleanup (PowerShell)
+Dry-run cleanup of old SEC JSONs and run logs; add `-Execute` to delete.
+```powershell
+.\scripts\cleanup_runs.ps1
+.\scripts\cleanup_runs.ps1 -Execute
+```
+
 ## Peer multiples refresh (PowerShell)
 Fetch latest peer multiples (best-effort HTML parsing) into `data/peer_multiples.csv`.
 ```powershell
