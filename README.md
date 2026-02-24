@@ -47,6 +47,12 @@ Generate PNG charts into `outputs/charts/`.
 .\scripts\build_charts.ps1
 ```
 
+## Peer multiples refresh (PowerShell)
+Fetch latest peer multiples (best-effort HTML parsing) into `data/peer_multiples.csv`.
+```powershell
+.\scripts\update_peer_multiples.ps1
+```
+
 ## Analysis pipeline (PowerShell)
 Run these in order after setting a real SEC User-Agent.
 ```powershell
@@ -88,3 +94,4 @@ Run these in order after setting a real SEC User-Agent.
 - Rust module for SEC fetch/caching has been added (`cargo run -- fetch-sec`).
 - Charts can be generated from `data/` via `scripts/build_charts.ps1`.
 - Peer multiples data is tracked in `data/peer_multiples.csv` with sources in `research/peer_multiples_sources.md`.
+- Peer fundamentals are tracked in `data/peer_fundamentals.csv` with sources in `research/peer_fundamentals_sources.md`.

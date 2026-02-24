@@ -106,6 +106,7 @@ $balance = Read-CsvSorted -Path (Join-Path $DataDir "metrics_balance.csv")
 $cashflow = Read-CsvSorted -Path (Join-Path $DataDir "financials_cashflow.csv")
 $metricsCashflow = Read-CsvSorted -Path (Join-Path $DataDir "metrics_cashflow.csv")
 $peersPath = Join-Path $DataDir "peer_multiples.csv"
+$peerFundamentalsPath = Join-Path $DataDir "peer_fundamentals.csv"
 
 $years = $income | ForEach-Object { [int]$_.FiscalYear }
 
@@ -193,4 +194,29 @@ if (Test-Path $peersPath) {
             "P/FCF" = $peers | ForEach-Object { [double]$_.P_FCF }
         } `
         -OutPath (Join-Path $OutDir "peer_multiples.png")
+}
+
+if (Test-Path $peerFundamentalsPath) {
+    $peerFundamentals = Import-Csv -Path $peerFundamentalsPath
+    $companies = $peerFundamentals | ForEach-Object { $_.Company }
+
+    New-BarChart `
+        -Title "Peer Revenue Growth (Latest Fiscal Year)" `
+        -YAxisTitle "Percent" `
+        -Categories $companies `
+        -SeriesMap @{
+            "Revenue YoY" = $peerFundamentals | ForEach-Object { [double]$_.RevenueYoY * 100 }
+        } `
+        -OutPath (Join-Path $OutDir "peer_revenue_growth.png")
+
+    New-BarChart `
+        -Title "Peer Margins (Latest Fiscal Year)" `
+        -YAxisTitle "Percent" `
+        -Categories $companies `
+        -SeriesMap @{
+            "Gross Margin" = $peerFundamentals | ForEach-Object { [double]$_.GrossMargin * 100 }
+            "Operating Margin" = $peerFundamentals | ForEach-Object { [double]$_.OperatingMargin * 100 }
+            "Net Margin" = $peerFundamentals | ForEach-Object { [double]$_.NetMargin * 100 }
+        } `
+        -OutPath (Join-Path $OutDir "peer_margins.png")
 }

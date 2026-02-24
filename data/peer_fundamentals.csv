@@ -1,0 +1,5 @@
+"Company","Ticker","FiscalYear","Revenue","RevenuePrior","RevenueYoY","GrossMargin","OperatingMargin","NetMargin","Currency","Source"
+"Apple","AAPL","2025","416.161","391.035","0.064255","0.469052","0.319708","0.269151","USD (billions)","data/financials_income.csv"
+"Microsoft","MSFT","2025","281724","245122","0.149322","0.688237","0.45622","0.36146","USD (millions)","microsoft.com (FY2025 Annual Report)"
+"Alphabet","GOOGL","2024","350018","307394","0.138662","0.582004","0.321098","0.286037","USD (millions)","sec.gov (Alphabet 2024 Form 10-K)"
+"Samsung Electronics","005930.KS","2024","300870903","258935494","0.161953","0.379926","0.108771","0.114505","KRW (millions)","samsung.com (2024 consolidated financial statements)"

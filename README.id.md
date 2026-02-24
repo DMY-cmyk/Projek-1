@@ -47,6 +47,12 @@ Hasilkan grafik PNG ke `outputs/charts/`.
 .\scripts\build_charts.ps1
 ```
 
+## Refresh multiple peer (PowerShell)
+Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
+```powershell
+.\scripts\update_peer_multiples.ps1
+```
+
 ## Pipeline analisis (PowerShell)
 Jalankan ini berurutan setelah mengatur User-Agent SEC yang valid.
 ```powershell
@@ -88,3 +94,4 @@ Jalankan ini berurutan setelah mengatur User-Agent SEC yang valid.
 - Modul Rust untuk pengambilan/cache SEC sudah ditambahkan (`cargo run -- fetch-sec`).
 - Grafik dapat dihasilkan dari `data/` melalui `scripts/build_charts.ps1`.
 - Data multiple peer disimpan di `data/peer_multiples.csv` dengan sumber di `research/peer_multiples_sources.md`.
+- Data fundamental peer disimpan di `data/peer_fundamentals.csv` dengan sumber di `research/peer_fundamentals_sources.md`.

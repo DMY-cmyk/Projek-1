@@ -51,6 +51,14 @@ $metricsBalance = Load-Csv (Join-Path $DataDir "metrics_balance.csv")
 $metricsCash = Load-Csv (Join-Path $DataDir "metrics_cashflow.csv")
 $valuation = Load-Csv (Join-Path $DataDir "valuation_snapshot.csv")
 
+$latestIncome = $income | Sort-Object -Property FiscalYear -Descending | Select-Object -First 1
+$latestRevenue = [double]$latestIncome.Revenue
+$latestGrossMargin = [double]$latestIncome.GrossProfit / $latestRevenue
+$latestOperatingMargin = [double]$latestIncome.OperatingIncome / $latestRevenue
+$latestNetMargin = [double]$latestIncome.NetIncome / $latestRevenue
+$onePctRevenue = $latestRevenue * 0.01
+$netIncomeImpact = $onePctRevenue * $latestNetMargin
+
 $peerPath = Join-Path $DataDir "peer_multiples.csv"
 $peerData = @()
 if (Test-Path $peerPath) {
@@ -185,6 +193,19 @@ $report += ''
 $report += 'Peer multiples chart (as of latest closes shown in sources; see `data/peer_multiples.csv` and `research/peer_multiples_sources.md`):'
 $report += ''
 $report += '![Peer Valuation Multiples (As of latest close)](charts/peer_multiples.png)'
+$report += ''
+$report += '## Peer Fundamentals'
+$report += 'Source: `data/peer_fundamentals.csv` and `research/peer_fundamentals_sources.md` (latest fiscal years for each peer).'
+$report += ''
+$report += '![Peer Revenue Growth (Latest Fiscal Year)](charts/peer_revenue_growth.png)'
+$report += ''
+$report += '![Peer Margins (Latest Fiscal Year)](charts/peer_margins.png)'
+$report += ''
+$report += '## Quantified Sensitivities (FY' + $latestIncome.FiscalYear + ')'
+$report += ("- 1% change in revenue implies about ${0:N2}B revenue swing." -f $onePctRevenue)
+$report += ("- 100 bps change in gross margin implies about ${0:N2}B change in gross profit." -f $onePctRevenue)
+$report += ("- 100 bps change in operating margin implies about ${0:N2}B change in operating income." -f $onePctRevenue)
+$report += ("- At FY{0} net margin of {1:N1}%, a 1% revenue swing implies about ${2:N2}B net income impact." -f $latestIncome.FiscalYear, ($latestNetMargin * 100), $netIncomeImpact)
 $report += ''
 $report += '## DCF Base Case (Illustrative)'
 $report += 'Source: `models/dcf_summary.md`, `models/dcf_scenarios.csv`, `models/dcf_sensitivity.csv`'

@@ -162,6 +162,19 @@ Peer multiples chart (as of latest closes shown in sources; see `data/peer_multi
 
 ![Peer Valuation Multiples (As of latest close)](charts/peer_multiples.png)
 
+## Peer Fundamentals
+Source: `data/peer_fundamentals.csv` and `research/peer_fundamentals_sources.md` (latest fiscal years for each peer).
+
+![Peer Revenue Growth (Latest Fiscal Year)](charts/peer_revenue_growth.png)
+
+![Peer Margins (Latest Fiscal Year)](charts/peer_margins.png)
+
+## Quantified Sensitivities (FY2025)
+- 1% change in revenue implies about B revenue swing.
+- 100 bps change in gross margin implies about B change in gross profit.
+- 100 bps change in operating margin implies about B change in operating income.
+- At FY2025 net margin of 26.9%, a 1% revenue swing implies about B net income impact.
+
 ## DCF Base Case (Illustrative)
 Source: `models/dcf_summary.md`, `models/dcf_scenarios.csv`, `models/dcf_sensitivity.csv`
 - Equity value per share (illustrative): $141.61
