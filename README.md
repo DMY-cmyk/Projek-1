@@ -59,6 +59,12 @@ Generate a concise filings log (10-K/10-Q/8-K) in `outputs/key_events.md`.
 .\scripts\build_key_events.ps1
 ```
 
+## Data freshness (PowerShell)
+Check how old the latest filings and valuation snapshot are in `outputs/freshness_report.md`.
+```powershell
+.\scripts\check_data_freshness.ps1
+```
+
 ## Peer multiples refresh (PowerShell)
 Fetch latest peer multiples (best-effort HTML parsing) into `data/peer_multiples.csv`.
 ```powershell

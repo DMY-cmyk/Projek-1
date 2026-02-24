@@ -59,6 +59,12 @@ Hasilkan log filing ringkas (10-K/10-Q/8-K) di `outputs/key_events.md`.
 .\scripts\build_key_events.ps1
 ```
 
+## Freshness data (PowerShell)
+Periksa umur filing terbaru dan snapshot valuasi di `outputs/freshness_report.md`.
+```powershell
+.\scripts\check_data_freshness.ps1
+```
+
 ## Refresh multiple peer (PowerShell)
 Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
 ```powershell
