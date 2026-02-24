@@ -20,10 +20,7 @@
       "WebFetch(domain:www.insidermonkey.com)",
       "WebFetch(domain:bullfincher.io)",
       "WebFetch(domain:www.stockinsights.ai)",
-      "WebFetch(domain:www.webpronews.com)",
-      "Bash(git add:*)",
-      "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "WebFetch(domain:www.webpronews.com)"
     ]
   }
 }
