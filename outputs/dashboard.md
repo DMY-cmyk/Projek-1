@@ -40,6 +40,9 @@ See outputs/scenario_stress.md (run scripts/build_scenario_stress.ps1).
 ## Report Pack
 Run all generators and capture a run log in outputs/run_log.md (run scripts/build_report_pack.ps1).
 
+## Refresh Status
+Verify expected outputs with outputs/refresh_status.md (run scripts/refresh_all_status.ps1).
+
 ## Quarterly Inputs (Optional)
 If quarterly CSVs exist, drop them into data/quarterly_*.csv and re-run this script.
 Expected columns: Period, Revenue, GrossMargin, OperatingMargin, NetMargin, FCF.

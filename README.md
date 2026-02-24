@@ -101,6 +101,12 @@ Validate inputs and print planned steps without network calls.
 .\scripts\refresh_all_dryrun.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
 ```
 
+## Refresh status (PowerShell)
+Verify expected outputs and timestamps in `outputs/refresh_status.md`.
+```powershell
+.\scripts\refresh_all_status.ps1
+```
+
 ## Peer multiples refresh (PowerShell)
 Fetch latest peer multiples (best-effort HTML parsing) into `data/peer_multiples.csv`.
 ```powershell

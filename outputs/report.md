@@ -201,3 +201,4 @@ Key KPIs to monitor each quarter include total revenue growth, services mix, iPh
 - Drift alerts: `outputs/drift_alerts.md`.
 - Scenario stress: `outputs/scenario_stress.md`.
 - Report pack log: `outputs/run_log.md`.
+- Refresh status: `outputs/refresh_status.md`.

@@ -101,6 +101,12 @@ Validasi input dan tampilkan langkah yang akan dijalankan tanpa network call.
 .\scripts\refresh_all_dryrun.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
 ```
 
+## Refresh status (PowerShell)
+Verifikasi output dan timestamp di `outputs/refresh_status.md`.
+```powershell
+.\scripts\refresh_all_status.ps1
+```
+
 ## Refresh multiple peer (PowerShell)
 Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
 ```powershell
