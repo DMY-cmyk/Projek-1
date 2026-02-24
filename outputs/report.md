@@ -204,3 +204,4 @@ Key KPIs to monitor each quarter include total revenue growth, services mix, iPh
 - Refresh status: `outputs/refresh_status.md`.
 - Quick review: `outputs/quick_review.md`.
 - Cleanup plan (dry run): `outputs/cleanup_plan.md`.
+- Health check: `outputs/health_check.md`.

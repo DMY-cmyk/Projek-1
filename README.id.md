@@ -128,6 +128,12 @@ Dry-run pembersihan JSON SEC dan run log lama; gunakan `-Execute` untuk menghapu
 
 ## Cleanup plan
 Rencana pembersihan dry-run ditulis ke `outputs/cleanup_plan.md` saat menjalankan `cleanup_runs.ps1`.
+
+## Health check (PowerShell)
+Validasi output dan freshness di `outputs/health_check.md`.
+```powershell
+.\scripts\build_health_check.ps1
+```
 ## Refresh multiple peer (PowerShell)
 Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
 ```powershell

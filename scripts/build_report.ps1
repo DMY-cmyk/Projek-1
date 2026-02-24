@@ -236,6 +236,7 @@ $report += '- Report pack log: `outputs/run_log.md`.'
 $report += '- Refresh status: `outputs/refresh_status.md`.'
 $report += '- Quick review: `outputs/quick_review.md`.'
 $report += '- Cleanup plan (dry run): `outputs/cleanup_plan.md`.'
+$report += '- Health check: `outputs/health_check.md`.'
 
 $outDir = Split-Path $OutPath -Parent
 if (-not (Test-Path $outDir)) {

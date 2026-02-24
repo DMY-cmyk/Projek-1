@@ -128,6 +128,12 @@ Dry-run cleanup of old SEC JSONs and run logs; add `-Execute` to delete.
 
 ## Cleanup plan
 Dry-run cleanup plan written to `outputs/cleanup_plan.md` when running `cleanup_runs.ps1`.
+
+## Health check (PowerShell)
+Validate output presence and freshness in `outputs/health_check.md`.
+```powershell
+.\scripts\build_health_check.ps1
+```
 ## Peer multiples refresh (PowerShell)
 Fetch latest peer multiples (best-effort HTML parsing) into `data/peer_multiples.csv`.
 ```powershell
