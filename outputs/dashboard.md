@@ -76,6 +76,9 @@ Latest changes in outputs/release_notes.md (run scripts/build_release_notes.ps1)
 ## Benchmark Snapshot
 Peer snapshot in outputs/benchmark_snapshot.md (run scripts/build_benchmark_snapshot.ps1).
 
+## Benchmark History
+Append history to outputs/benchmark_history.csv (run scripts/append_benchmark_history.ps1).
+
 ## Quarterly Inputs (Optional)
 If quarterly CSVs exist, drop them into data/quarterly_*.csv and re-run this script.
 Expected columns: Period, Revenue, GrossMargin, OperatingMargin, NetMargin, FCF.

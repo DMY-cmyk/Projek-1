@@ -213,3 +213,4 @@ Key KPIs to monitor each quarter include total revenue growth, services mix, iPh
 - Data dictionary: `outputs/data_dictionary.md`.
 - Release notes: `outputs/release_notes.md`.
 - Benchmark snapshot: `outputs/benchmark_snapshot.md`.
+- Benchmark history: `outputs/benchmark_history.csv`.

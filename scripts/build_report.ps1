@@ -245,6 +245,7 @@ $report += '- Sanity checks: `outputs/sanity_checks.md`.'
 $report += '- Data dictionary: `outputs/data_dictionary.md`.'
 $report += '- Release notes: `outputs/release_notes.md`.'
 $report += '- Benchmark snapshot: `outputs/benchmark_snapshot.md`.'
+$report += '- Benchmark history: `outputs/benchmark_history.csv`.'
 
 $outDir = Split-Path $OutPath -Parent
 if (-not (Test-Path $outDir)) {

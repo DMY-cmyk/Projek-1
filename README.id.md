@@ -182,6 +182,12 @@ Hasilkan snapshot peer di `outputs/benchmark_snapshot.md`.
 ```powershell
 .\scripts\build_benchmark_snapshot.ps1
 ```
+
+## Benchmark history (PowerShell)
+Tambahkan baris snapshot ke `outputs/benchmark_history.csv`.
+```powershell
+.\scripts\append_benchmark_history.ps1
+```
 ## Refresh multiple peer (PowerShell)
 Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
 ```powershell

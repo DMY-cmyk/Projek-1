@@ -41,6 +41,7 @@ $steps.Add((Run-Step "Sanity checks" "scripts/build_sanity_checks.ps1")) | Out-N
 $steps.Add((Run-Step "Data dictionary" "scripts/build_data_dictionary.ps1")) | Out-Null
 $steps.Add((Run-Step "Release notes" "scripts/build_release_notes.ps1")) | Out-Null
 $steps.Add((Run-Step "Benchmark snapshot" "scripts/build_benchmark_snapshot.ps1")) | Out-Null
+$steps.Add((Run-Step "Append benchmark history" "scripts/append_benchmark_history.ps1")) | Out-Null
 
 $log = @()
 $log += "# Report Pack CI Run Log"
