@@ -195,3 +195,4 @@ Key KPIs to monitor each quarter include total revenue growth, services mix, iPh
 - Data sources: `research/sec/`, `research/market_price_source.txt`, `research/peer_multiples_sources.md`.
 - Assumptions and calculations: `data/`, `models/dcf_summary.md`.
 - Reconciliation checks: `data/reconciliation_notes.md`, `data/reconciliation_balance_sheet.md`, `data/reconciliation_cashflow.md`.
+- Latest filings log: `outputs/key_events.md`.

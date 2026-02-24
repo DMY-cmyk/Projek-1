@@ -53,6 +53,12 @@ Hasilkan dashboard monitoring ringan di `outputs/dashboard.md`.
 .\scripts\build_dashboard.ps1
 ```
 
+## Log kejadian kunci (PowerShell)
+Hasilkan log filing ringkas (10-K/10-Q/8-K) di `outputs/key_events.md`.
+```powershell
+.\scripts\build_key_events.ps1
+```
+
 ## Refresh multiple peer (PowerShell)
 Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
 ```powershell

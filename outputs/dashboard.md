@@ -22,6 +22,9 @@ Charts source: outputs/charts/ (run scripts/build_charts.ps1).
 
 ![Free Cash Flow and Capital Returns](charts/fcf_capital_returns.png)
 
+## Key Events
+See outputs/key_events.md (run scripts/build_key_events.ps1).
+
 ## Quarterly Inputs (Optional)
 If quarterly CSVs exist, drop them into data/quarterly_*.csv and re-run this script.
 Expected columns: Period, Revenue, GrossMargin, OperatingMargin, NetMargin, FCF.
