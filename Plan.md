@@ -137,6 +137,17 @@ Last updated: 2026-02-24
 - Charts labeled with source and period. (Completed; `outputs/charts/` via `scripts/build_charts.ps1`)
 - Conclusions trace back to quantified evidence. (Completed; report references data tables)
 
+## 17) Operational tooling and monitoring
+- One-command refresh for SEC fetch + full report pack. (Completed; `scripts/refresh_all.ps1`)
+- Dry-run refresh validation. (Completed; `scripts/refresh_all_dryrun.ps1`)
+- Report pack and CI report pack. (Completed; `scripts/build_report_pack.ps1`, `scripts/build_report_pack_ci.ps1`)
+- Dashboard, key events log, and quick review rollups. (Completed; `outputs/dashboard.md`, `outputs/key_events.md`, `outputs/quick_review.md`)
+- Freshness, sanity checks, and health check reports. (Completed; `outputs/freshness_report.md`, `outputs/sanity_checks.md`, `outputs/health_check.md`)
+- Change log and scenario stress. (Completed; `outputs/change_log.md`, `outputs/scenario_stress.md`)
+- Peer benchmarking snapshot and history. (Completed; `outputs/benchmark_snapshot.md`, `outputs/benchmark_history.csv`)
+- Export bundle and outputs manifest. (Completed; `outputs/export_bundle.zip`, `outputs/manifest.json`)
+- Cleanup dry-run plan. (Completed; `outputs/cleanup_plan.md`)
+
 
 
 
