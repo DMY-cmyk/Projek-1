@@ -230,6 +230,7 @@ $report += '- Reconciliation checks: `data/reconciliation_notes.md`, `data/recon
 $report += '- Latest filings log: `outputs/key_events.md`.'
 $report += '- Data freshness: `outputs/freshness_report.md`.'
 $report += '- Change log: `outputs/change_log.md`.'
+$report += '- Drift alerts: `outputs/drift_alerts.md`.'
 
 $outDir = Split-Path $OutPath -Parent
 if (-not (Test-Path $outDir)) {

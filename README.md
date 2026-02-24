@@ -71,6 +71,12 @@ Summarize year-over-year deltas into `outputs/change_log.md`.
 .\scripts\build_change_log.ps1
 ```
 
+## Drift alerts (PowerShell)
+Flag outliers vs 5-year averages in `outputs/drift_alerts.md`.
+```powershell
+.\scripts\build_drift_alerts.ps1
+```
+
 ## Peer multiples refresh (PowerShell)
 Fetch latest peer multiples (best-effort HTML parsing) into `data/peer_multiples.csv`.
 ```powershell

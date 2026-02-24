@@ -71,6 +71,12 @@ Ringkas delta YoY ke `outputs/change_log.md`.
 .\scripts\build_change_log.ps1
 ```
 
+## Drift alerts (PowerShell)
+Tandai outlier dibanding rata-rata 5 tahun di `outputs/drift_alerts.md`.
+```powershell
+.\scripts\build_drift_alerts.ps1
+```
+
 ## Refresh multiple peer (PowerShell)
 Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
 ```powershell
