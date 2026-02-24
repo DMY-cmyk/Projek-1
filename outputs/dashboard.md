@@ -55,6 +55,9 @@ See outputs/health_check.md (run scripts/build_health_check.ps1).
 ## Summary JSON
 Machine-readable snapshot in outputs/summary.json (run scripts/build_summary_json.ps1).
 
+## Export Bundle
+Zip bundle in outputs/export_bundle.zip (run scripts/build_export_bundle.ps1).
+
 ## Quarterly Inputs (Optional)
 If quarterly CSVs exist, drop them into data/quarterly_*.csv and re-run this script.
 Expected columns: Period, Revenue, GrossMargin, OperatingMargin, NetMargin, FCF.

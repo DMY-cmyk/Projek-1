@@ -140,6 +140,12 @@ Tulis snapshot machine-readable ke `outputs/summary.json`.
 ```powershell
 .\scripts\build_summary_json.ps1
 ```
+
+## Export bundle (PowerShell)
+Zip CSV dan output utama ke `outputs/export_bundle.zip`.
+```powershell
+.\scripts\build_export_bundle.ps1
+```
 ## Refresh multiple peer (PowerShell)
 Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
 ```powershell

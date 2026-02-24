@@ -238,6 +238,7 @@ $report += '- Quick review: `outputs/quick_review.md`.'
 $report += '- Cleanup plan (dry run): `outputs/cleanup_plan.md`.'
 $report += '- Health check: `outputs/health_check.md`.'
 $report += '- Summary JSON: `outputs/summary.json`.'
+$report += '- Export bundle: `outputs/export_bundle.zip`.'
 
 $outDir = Split-Path $OutPath -Parent
 if (-not (Test-Path $outDir)) {
