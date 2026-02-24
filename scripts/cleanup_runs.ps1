@@ -3,6 +3,7 @@ param(
     [string]$OutputsDir = "outputs",
     [int]$KeepSecFiles = 3,
     [int]$KeepRunLogs = 5,
+    [string]$PlanPath = "outputs/cleanup_plan.md",
     [switch]$Execute
 )
 
@@ -41,5 +42,29 @@ if ($Execute) {
     foreach ($f in $removeLogs) { Remove-Item -Force $f.FullName }
     Write-Host "Cleanup complete."
 } else {
-    Write-Host "Dry run only. Re-run with -Execute to delete."
+    $plan = @()
+    $plan += "# Cleanup Plan (Dry Run)"
+    $plan += ""
+    $plan += ("Generated: {0:yyyy-MM-dd HH:mm:ss} local time" -f (Get-Date))
+    $plan += ""
+    $plan += "## SEC JSON to remove"
+    if ($removeSec.Count -gt 0) {
+        foreach ($f in $removeSec) { $plan += "- " + $f.FullName }
+    } else {
+        $plan += "- None"
+    }
+    $plan += ""
+    $plan += "## Run logs to remove"
+    if ($removeLogs.Count -gt 0) {
+        foreach ($f in $removeLogs) { $plan += "- " + $f.FullName }
+    } else {
+        $plan += "- None"
+    }
+
+    $outDir = Split-Path $PlanPath -Parent
+    if (-not (Test-Path $outDir)) {
+        New-Item -ItemType Directory -Force $outDir | Out-Null
+    }
+    $plan -join "`n" | Out-File -FilePath $PlanPath -Encoding utf8
+    Write-Host ("Dry run only. Plan written to {0}. Re-run with -Execute to delete." -f $PlanPath)
 }

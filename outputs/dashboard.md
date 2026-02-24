@@ -46,6 +46,9 @@ Verify expected outputs with outputs/refresh_status.md (run scripts/refresh_all_
 ## Quick Review
 Summarize key outputs in outputs/quick_review.md (run scripts/build_quick_review.ps1).
 
+## Cleanup Plan
+See outputs/cleanup_plan.md (dry run via scripts/cleanup_runs.ps1).
+
 ## Quarterly Inputs (Optional)
 If quarterly CSVs exist, drop them into data/quarterly_*.csv and re-run this script.
 Expected columns: Period, Revenue, GrossMargin, OperatingMargin, NetMargin, FCF.
