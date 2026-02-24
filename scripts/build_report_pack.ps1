@@ -35,6 +35,7 @@ $steps.Add((Run-Step "Build drift alerts" "scripts/build_drift_alerts.ps1")) | O
 $steps.Add((Run-Step "Build scenario stress" "scripts/build_scenario_stress.ps1")) | Out-Null
 $steps.Add((Run-Step "Cleanup plan (dry run)" "scripts/cleanup_runs.ps1")) | Out-Null
 $steps.Add((Run-Step "Health check" "scripts/build_health_check.ps1")) | Out-Null
+$steps.Add((Run-Step "Summary JSON" "scripts/build_summary_json.ps1")) | Out-Null
 
 $log = @()
 $log += "# Report Pack Run Log"

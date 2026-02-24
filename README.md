@@ -134,6 +134,12 @@ Validate output presence and freshness in `outputs/health_check.md`.
 ```powershell
 .\scripts\build_health_check.ps1
 ```
+
+## Summary JSON (PowerShell)
+Write a machine-readable snapshot to `outputs/summary.json`.
+```powershell
+.\scripts\build_summary_json.ps1
+```
 ## Peer multiples refresh (PowerShell)
 Fetch latest peer multiples (best-effort HTML parsing) into `data/peer_multiples.csv`.
 ```powershell

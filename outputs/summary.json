@@ -1,0 +1,23 @@
+﻿{
+    "generated_at":  "2026-02-24 22:32:29",
+    "fiscal_year":  2025,
+    "revenue":  416.161,
+    "gross_margin":  0.4691,
+    "operating_margin":  0.3197,
+    "net_margin":  0.2692,
+    "fcf":  98.767,
+    "fcf_conversion":  0.8818,
+    "net_cash":  33.763,
+    "current_ratio":  0.8933,
+    "quick_ratio":  0.8588,
+    "valuation":  {
+                      "pe":  35.4428,
+                      "as_of_date":  "2026-02-20",
+                      "p_fcf":  40.195,
+                      "ev_fcf":  39.8532,
+                      "price":  264.58,
+                      "market_cap_billions":  3969.9435,
+                      "enterprise_value_billions":  3936.1805,
+                      "ev_ebitda":  27.1933
+                  }
+}

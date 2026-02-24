@@ -52,6 +52,9 @@ See outputs/cleanup_plan.md (dry run via scripts/cleanup_runs.ps1).
 ## Health Check
 See outputs/health_check.md (run scripts/build_health_check.ps1).
 
+## Summary JSON
+Machine-readable snapshot in outputs/summary.json (run scripts/build_summary_json.ps1).
+
 ## Quarterly Inputs (Optional)
 If quarterly CSVs exist, drop them into data/quarterly_*.csv and re-run this script.
 Expected columns: Period, Revenue, GrossMargin, OperatingMargin, NetMargin, FCF.
