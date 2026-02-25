@@ -141,6 +141,7 @@ Last updated: 2026-02-25
 - One-command refresh for SEC fetch + full report pack. (Completed; `scripts/refresh_all.ps1`)
 - One-command refresh (safe mode). (Completed; `scripts/refresh_all_safe.ps1`)
 - One-command refresh with run summary. (Completed; `scripts/refresh_all_report.ps1`)
+- Refresh + report helper. (Completed; `scripts/refresh_and_report.ps1`)
 - Run history append helper. (Completed; `scripts/append_run_history.ps1`)
 - Run history comparison helper. (Completed; `scripts/compare_run_history.ps1`)
 - Run history listing helper. (Completed; `scripts/list_recent_runs.ps1`)

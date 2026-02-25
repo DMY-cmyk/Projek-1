@@ -102,6 +102,17 @@ Menjalankan preflight + validasi cache sebelum ekstraksi.
 ```
 
 ## One-command refresh (aman + ringkasan)
+Menjalankan `refresh_all_report.ps1` lalu mencetak ringkasan output dan fetch.
+```powershell
+.\scripts\refresh_and_report.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
+```
+
+## Refresh + report (PowerShell)
+Menjalankan `refresh_all_report.ps1` lalu mencetak ringkasan output dan fetch.
+```powershell
+.\scripts\refresh_and_report.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
+```
+
 Menjalankan safe refresh dan menulis `outputs/run_summary.md`.
 ```powershell
 .\scripts\refresh_all_report.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
