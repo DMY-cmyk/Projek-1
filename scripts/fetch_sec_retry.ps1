@@ -3,7 +3,8 @@ param(
     [int]$MaxAttempts = 3,
     [int]$BaseDelaySeconds = 5,
     [string]$ErrorLog = "outputs/fetch_errors.md",
-    [switch]$ForceFresh
+    [switch]$ForceFresh,
+    [switch]$FailFast
 )
 
 Set-StrictMode -Version Latest
@@ -32,6 +33,11 @@ try {
 } catch {
     $preflightOk = $false
     Write-ErrorLog ("Preflight error: {0}" -f $_.Exception.Message)
+}
+
+if ($FailFast -and -not $preflightOk) {
+    Write-Error "Preflight failed and -FailFast was set. See $ErrorLog"
+    exit 1
 }
 
 $attempt = 0

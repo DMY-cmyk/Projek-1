@@ -151,6 +151,7 @@ Last updated: 2026-02-25
 esearch/sec/request_status.csv)
 - ForceFresh option to skip cached SEC JSONs. (Completed; `scripts/fetch_sec_sources.ps1`, `scripts/fetch_sec_retry.ps1`)
 - SEC connectivity preflight logging (data.sec.gov + archives). (Completed; `scripts/check_sec_connectivity.ps1`, `outputs/fetch_status.md`)
+- Fail-fast option for preflight failures. (Completed; `scripts/fetch_sec_retry.ps1`)
 
 
 

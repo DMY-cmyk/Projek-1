@@ -101,6 +101,12 @@ Ulangi fetch SEC dengan exponential backoff dan log error ke `outputs/fetch_erro
 .\scripts\fetch_sec_retry.ps1 -UserAgent "Name email@domain.com" -MaxAttempts 3 -BaseDelaySeconds 5
 ```
 
+## SEC fetch (fail fast saat preflight gagal)
+Keluar langsung jika preflight gagal di kedua endpoint.
+```powershell
+.\scripts\fetch_sec_retry.ps1 -UserAgent "Name email@domain.com" -FailFast
+```
+
 ## Preflight konektivitas SEC (PowerShell)
 Ping `data.sec.gov` dan `www.sec.gov/Archives` lalu catat latensi + status di `outputs/fetch_status.md`.
 ```powershell
