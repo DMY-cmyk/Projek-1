@@ -113,6 +113,12 @@ Runs `refresh_all_report.ps1` then prints output and fetch summaries.
 .\scripts\refresh_and_report.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
 ```
 
+## Quick run (PowerShell)
+Preflight + fetch + cache validation only (no extraction).
+```powershell
+.\scripts\quick_run.ps1 -UserAgent "Name email@domain.com"
+```
+
 ## Export run bundle (PowerShell)
 Zip key run artifacts into `outputs/run_bundle.zip`.
 ```powershell

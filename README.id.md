@@ -113,6 +113,12 @@ Menjalankan `refresh_all_report.ps1` lalu mencetak ringkasan output dan fetch.
 .\scripts\refresh_and_report.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
 ```
 
+## Quick run (PowerShell)
+Hanya preflight + fetch + validasi cache (tanpa ekstraksi).
+```powershell
+.\scripts\quick_run.ps1 -UserAgent "Name email@domain.com"
+```
+
 ## Export run bundle (PowerShell)
 Zip artefak run utama ke `outputs/run_bundle.zip`.
 ```powershell
