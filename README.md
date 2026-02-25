@@ -131,6 +131,12 @@ Verify execution policy, toolchain, and required scripts.
 .\scripts\check_env.ps1
 ```
 
+## Input validation (PowerShell)
+Validate `-AsOfDate`, `-Price`, and User-Agent format.
+```powershell
+.\scripts\validate_inputs.ps1 -AsOfDate 2026-02-20 -Price 264.58 -UserAgent "Name email@domain.com"
+```
+
 ## Verify outputs (PowerShell)
 Check for required output files after a run.
 ```powershell

@@ -136,6 +136,12 @@ Verifikasi execution policy, toolchain, dan skrip yang dibutuhkan.
 .\scripts\check_env.ps1
 ```
 
+## Validasi input (PowerShell)
+Validasi format `-AsOfDate`, `-Price`, dan User-Agent.
+```powershell
+.\scripts\validate_inputs.ps1 -AsOfDate 2026-02-20 -Price 264.58 -UserAgent "Name email@domain.com"
+```
+
 ## Verifikasi output (PowerShell)
 Periksa keberadaan file output wajib setelah run.
 ```powershell

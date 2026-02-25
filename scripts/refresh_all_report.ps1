@@ -13,6 +13,8 @@ if (-not $UserAgent -or $UserAgent.Trim().Length -lt 6) {
     exit 1
 }
 
+& powershell.exe -ExecutionPolicy Bypass -File scripts/validate_inputs.ps1 -AsOfDate $AsOfDate -Price $Price -UserAgent $UserAgent
+
 Write-Host "Running safe refresh..."
 $forceFreshArg = @()
 if ($ForceFresh) { $forceFreshArg = @("-ForceFresh") }

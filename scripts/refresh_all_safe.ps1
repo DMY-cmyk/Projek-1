@@ -13,6 +13,8 @@ if (-not $UserAgent -or $UserAgent.Trim().Length -lt 6) {
     exit 1
 }
 
+& powershell.exe -ExecutionPolicy Bypass -File scripts/validate_inputs.ps1 -AsOfDate $AsOfDate -Price $Price -UserAgent $UserAgent
+
 Write-Host "Preflight connectivity..."
 & powershell.exe -ExecutionPolicy Bypass -File scripts/check_sec_connectivity.ps1 -UserAgent $UserAgent
 
