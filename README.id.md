@@ -119,6 +119,12 @@ Bandingkan dua run terakhir di `outputs/run_history.csv`.
 .\scripts\compare_run_history.ps1
 ```
 
+## Ringkasan output (PowerShell)
+Daftar file output beserta ukuran dan waktu modifikasi.
+```powershell
+.\scripts\summarize_outputs.ps1
+```
+
 ## SEC fetch dengan retry (PowerShell)
 Ulangi fetch SEC dengan exponential backoff dan log error ke `outputs/fetch_errors.md`.
 ```powershell
