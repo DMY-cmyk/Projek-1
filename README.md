@@ -119,6 +119,12 @@ Preflight + fetch + cache validation only (no extraction).
 .\scripts\quick_run.ps1 -UserAgent "Name email@domain.com"
 ```
 
+## Environment check (PowerShell)
+Verify execution policy, toolchain, and required scripts.
+```powershell
+.\scripts\check_env.ps1
+```
+
 ## Export run bundle (PowerShell)
 Zip key run artifacts into `outputs/run_bundle.zip`.
 ```powershell

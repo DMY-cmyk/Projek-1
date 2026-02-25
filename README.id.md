@@ -119,6 +119,12 @@ Hanya preflight + fetch + validasi cache (tanpa ekstraksi).
 .\scripts\quick_run.ps1 -UserAgent "Name email@domain.com"
 ```
 
+## Pemeriksaan lingkungan (PowerShell)
+Verifikasi execution policy, toolchain, dan skrip yang dibutuhkan.
+```powershell
+.\scripts\check_env.ps1
+```
+
 ## Export run bundle (PowerShell)
 Zip artefak run utama ke `outputs/run_bundle.zip`.
 ```powershell

@@ -144,6 +144,7 @@ Last updated: 2026-02-25
 - Refresh + report helper. (Completed; `scripts/refresh_and_report.ps1`)
 - Run bundle export helper. (Completed; `scripts/export_run_bundle.ps1`)
 - Quick run helper (preflight + fetch + cache validation only). (Completed; `scripts/quick_run.ps1`)
+- Environment check helper. (Completed; `scripts/check_env.ps1`)
 - Run history append helper. (Completed; `scripts/append_run_history.ps1`)
 - Run history comparison helper. (Completed; `scripts/compare_run_history.ps1`)
 - Run history listing helper. (Completed; `scripts/list_recent_runs.ps1`)
