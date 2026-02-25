@@ -31,14 +31,18 @@ cargo run
 
 ## SEC API fetch (Rust)
 Fetch and cache SEC JSON into `research/sec/` with request logging.
+`--cik` defaults to Apple (`0000320193`). `--user-agent` is optional if `SEC_USER_AGENT` is set.
 ```powershell
-cargo run -- fetch-sec --cik 0000320193 --user-agent "Name email@domain.com"
+$env:SEC_USER_AGENT = "Name email@domain.com"
+cargo run -- fetch-sec
 ```
 
 ## Full pipeline (Rust + PowerShell)
 Run the end-to-end pipeline (fetch, extract, metrics, valuation, report, charts).
+`--cik` defaults to Apple (`0000320193`). `--user-agent` is optional if `SEC_USER_AGENT` is set.
 ```powershell
-cargo run -- run-pipeline --cik 0000320193 --user-agent "Name email@domain.com" --price 264.58 --as-of-date 2026-02-20
+$env:SEC_USER_AGENT = "Name email@domain.com"
+cargo run -- run-pipeline --price 264.58 --as-of-date 2026-02-20
 ```
 
 ## Charts (PowerShell)

@@ -1,8 +1,9 @@
 ﻿# Release Notes
 
-Generated: 2026-02-25 18:59:16 local time
+Generated: 2026-02-25 21:18:05 local time
 
 ## Recent Commits
+- 81e8423 Run refresh pipeline, fix verification scripts, and clean docs
 - 0bd6c54 Add tool version capture
 - 749bb29 Add helper search
 - b64022e Add helpers index
@@ -12,11 +13,10 @@ Generated: 2026-02-25 18:59:16 local time
 - 32848db Add outputs verification
 - 00fb63a Add environment check
 - 98bac3a Add quick run helper
-- f654079 Add run bundle export
 
 ## Output Timestamps
-- outputs/report.md: 2026-02-25 18:59:04
-- outputs/dashboard.md: 2026-02-25 18:59:09
-- outputs/run_log.md: 2026-02-25 13:45:35
-- outputs/summary.json: 2026-02-25 18:59:13
-- outputs/manifest.json: 2026-02-25 18:59:15
+- outputs/report.md: 2026-02-25 21:17:56
+- outputs/dashboard.md: 2026-02-25 21:17:59
+- outputs/run_log.md: 2026-02-25 18:59:17
+- outputs/summary.json: 2026-02-25 21:18:02
+- outputs/manifest.json: 2026-02-25 21:18:04
