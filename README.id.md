@@ -137,6 +137,12 @@ Periksa cache SEC terbaru dan beri tanda jika lebih tua dari N hari.
 .\scripts\verify_sec_cache.ps1 -MaxAgeDays 7
 ```
 
+## Ringkasan status request SEC (PowerShell)
+Ringkas jumlah sukses/gagal per endpoint dari `research/sec/request_status.csv`.
+```powershell
+.\scripts\fetch_sec_status.ps1
+```
+
 ## Preflight konektivitas SEC (PowerShell)
 Ping `data.sec.gov` dan `www.sec.gov/Archives` lalu catat latensi + status di `outputs/fetch_status.md`.
 ```powershell

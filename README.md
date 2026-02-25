@@ -137,6 +137,12 @@ Check the latest SEC cache files and flag if older than N days.
 .\scripts\verify_sec_cache.ps1 -MaxAgeDays 7
 ```
 
+## SEC request status summary (PowerShell)
+Summarize success/fail counts per endpoint from `research/sec/request_status.csv`.
+```powershell
+.\scripts\fetch_sec_status.ps1
+```
+
 ## SEC connectivity preflight (PowerShell)
 Ping `data.sec.gov` and `www.sec.gov/Archives` and record latency + status in `outputs/fetch_status.md`.
 ```powershell
