@@ -149,6 +149,12 @@ Append key run metadata to `outputs/run_history.csv`.
 .\scripts\append_run_history.ps1 -AsOfDate 2026-02-20 -Price 264.58 -UserAgent "Name email@domain.com"
 ```
 
+## Print run summary (PowerShell)
+Print a concise view of `outputs/run_summary.md`.
+```powershell
+.\scripts\print_run_summary.ps1
+```
+
 ## Compare run history (PowerShell)
 Compare the last two runs in `outputs/run_history.csv`.
 ```powershell

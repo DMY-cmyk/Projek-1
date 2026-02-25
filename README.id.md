@@ -162,6 +162,12 @@ Tambahkan metadata run ke `outputs/run_history.csv`.
 .\scripts\append_run_history.ps1 -AsOfDate 2026-02-20 -Price 264.58 -UserAgent "Name email@domain.com"
 ```
 
+## Cetak ringkasan run (PowerShell)
+Cetak tampilan ringkas dari `outputs/run_summary.md`.
+```powershell
+.\scripts\print_run_summary.ps1
+```
+
 ## Bandingkan riwayat run (PowerShell)
 Bandingkan dua run terakhir di `outputs/run_history.csv`.
 ```powershell

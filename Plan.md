@@ -148,6 +148,7 @@ Last updated: 2026-02-25
 - Environment check helper. (Completed; `scripts/check_env.ps1`)
 - Outputs verification helper. (Completed; `scripts/verify_outputs.ps1`)
 - Run history append helper. (Completed; `scripts/append_run_history.ps1`)
+- Run summary print helper. (Completed; `scripts/print_run_summary.ps1`)
 - Run history comparison helper. (Completed; `scripts/compare_run_history.ps1`)
 - Run history listing helper. (Completed; `scripts/list_recent_runs.ps1`)
 - Outputs summary helper. (Completed; `scripts/summarize_outputs.ps1`)
