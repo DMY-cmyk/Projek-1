@@ -125,6 +125,12 @@ Verify execution policy, toolchain, and required scripts.
 .\scripts\check_env.ps1
 ```
 
+## Verify outputs (PowerShell)
+Check for required output files after a run.
+```powershell
+.\scripts\verify_outputs.ps1
+```
+
 ## Export run bundle (PowerShell)
 Zip key run artifacts into `outputs/run_bundle.zip`.
 ```powershell

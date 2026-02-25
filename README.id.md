@@ -125,6 +125,12 @@ Verifikasi execution policy, toolchain, dan skrip yang dibutuhkan.
 .\scripts\check_env.ps1
 ```
 
+## Verifikasi output (PowerShell)
+Periksa keberadaan file output wajib setelah run.
+```powershell
+.\scripts\verify_outputs.ps1
+```
+
 ## Export run bundle (PowerShell)
 Zip artefak run utama ke `outputs/run_bundle.zip`.
 ```powershell
