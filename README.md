@@ -101,6 +101,12 @@ Runs preflight + cache validation before extraction.
 .\scripts\refresh_all_safe.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
 ```
 
+## One-command refresh (CI)
+Runs safe refresh and fails if required outputs are missing.
+```powershell
+.\scripts\refresh_all_ci.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
+```
+
 ## One-command refresh (safe + summary)
 Runs safe refresh and writes `outputs/run_summary.md`.
 ```powershell

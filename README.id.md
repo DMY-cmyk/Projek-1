@@ -101,6 +101,17 @@ Menjalankan preflight + validasi cache sebelum ekstraksi.
 .\scripts\refresh_all_safe.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
 ```
 
+## One-command refresh (CI)
+Menjalankan safe refresh dan gagal jika output wajib tidak ada.
+```powershell
+.\scripts\refresh_all_ci.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
+```
+
+Menjalankan preflight + validasi cache sebelum ekstraksi.
+```powershell
+.\scripts\refresh_all_safe.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
+```
+
 ## One-command refresh (aman + ringkasan)
 Menjalankan `refresh_all_report.ps1` lalu mencetak ringkasan output dan fetch.
 ```powershell

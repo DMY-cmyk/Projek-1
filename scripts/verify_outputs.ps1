@@ -28,3 +28,9 @@ foreach ($name in $required) {
         Write-Host ("- {0}: MISSING" -f $name)
     }
 }
+
+$missing = $required | Where-Object { -not (Test-Path (Join-Path $OutDir $_)) }
+if ($missing.Count -gt 0) {
+    Write-Error ("Missing required outputs: {0}" -f ($missing -join ", "))
+    exit 1
+}

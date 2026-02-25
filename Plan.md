@@ -140,6 +140,7 @@ Last updated: 2026-02-25
 ## 17) Operational tooling and monitoring
 - One-command refresh for SEC fetch + full report pack. (Completed; `scripts/refresh_all.ps1`)
 - One-command refresh (safe mode). (Completed; `scripts/refresh_all_safe.ps1`)
+- One-command refresh CI helper. (Completed; `scripts/refresh_all_ci.ps1`)
 - One-command refresh with run summary. (Completed; `scripts/refresh_all_report.ps1`)
 - Refresh + report helper. (Completed; `scripts/refresh_and_report.ps1`)
 - Run bundle export helper. (Completed; `scripts/export_run_bundle.ps1`)
