@@ -125,6 +125,12 @@ Print a one-screen summary from `outputs/fetch_status.md` and `outputs/fetch_err
 .\scripts\print_fetch_summary.ps1
 ```
 
+## Fetch health check (PowerShell)
+Rotate logs, run preflight, fetch (fail-fast), then print a summary.
+```powershell
+.\scripts\health_check_fetch.ps1 -UserAgent "Name email@domain.com"
+```
+
 ## SEC connectivity preflight (PowerShell)
 Ping `data.sec.gov` and `www.sec.gov/Archives` and record latency + status in `outputs/fetch_status.md`.
 ```powershell

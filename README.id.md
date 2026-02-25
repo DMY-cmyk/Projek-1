@@ -125,6 +125,12 @@ Cetak ringkasan satu layar dari `outputs/fetch_status.md` dan `outputs/fetch_err
 .\scripts\print_fetch_summary.ps1
 ```
 
+## Health check fetch (PowerShell)
+Rotasi log, jalankan preflight, fetch (fail-fast), lalu cetak ringkasan.
+```powershell
+.\scripts\health_check_fetch.ps1 -UserAgent "Name email@domain.com"
+```
+
 ## Preflight konektivitas SEC (PowerShell)
 Ping `data.sec.gov` dan `www.sec.gov/Archives` lalu catat latensi + status di `outputs/fetch_status.md`.
 ```powershell
