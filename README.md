@@ -131,6 +131,12 @@ Rotate logs, run preflight, fetch (fail-fast), then print a summary.
 .\scripts\health_check_fetch.ps1 -UserAgent "Name email@domain.com"
 ```
 
+## SEC cache verification (PowerShell)
+Check the latest SEC cache files and flag if older than N days.
+```powershell
+.\scripts\verify_sec_cache.ps1 -MaxAgeDays 7
+```
+
 ## SEC connectivity preflight (PowerShell)
 Ping `data.sec.gov` and `www.sec.gov/Archives` and record latency + status in `outputs/fetch_status.md`.
 ```powershell

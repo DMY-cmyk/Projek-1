@@ -156,6 +156,7 @@ esearch/sec/request_status.csv)
 - Fetch log rotation helper. (Completed; `scripts/rotate_fetch_logs.ps1`)
 - Fetch summary helper for quick diagnostics. (Completed; `scripts/print_fetch_summary.ps1`)
 - Fetch health check helper (rotate + preflight + fetch + summary). (Completed; `scripts/health_check_fetch.ps1`)
+- SEC cache age verification helper. (Completed; `scripts/verify_sec_cache.ps1`)
 
 
 
