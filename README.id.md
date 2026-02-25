@@ -143,6 +143,12 @@ Ringkas jumlah sukses/gagal per endpoint dari `research/sec/request_status.csv`.
 .\scripts\fetch_sec_status.ps1
 ```
 
+## Validasi cache SEC (PowerShell)
+Validasi bahwa file JSON SEC terbaru tidak kosong dan bisa diparsing.
+```powershell
+.\scripts\validate_sec_files.ps1
+```
+
 ## Pangkas log status request (PowerShell)
 Simpan hanya N hari terakhir di `research/sec/request_status.csv`.
 ```powershell

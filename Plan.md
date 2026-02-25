@@ -159,6 +159,7 @@ esearch/sec/request_status.csv)
 - SEC cache age verification helper. (Completed; `scripts/verify_sec_cache.ps1`)
 - SEC request status summary helper. (Completed; `scripts/fetch_sec_status.ps1`)
 - Request status log trimming helper. (Completed; `scripts/trim_request_status.ps1`)
+- SEC cache validation helper. (Completed; `scripts/validate_sec_files.ps1`)
 
 
 

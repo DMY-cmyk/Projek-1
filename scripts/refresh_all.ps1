@@ -27,6 +27,9 @@ if (Test-Path "outputs/fetch_status.md") {
     }
 }
 
+Write-Host "Validating SEC cache..."
+& powershell.exe -ExecutionPolicy Bypass -File scripts/validate_sec_files.ps1
+
 Write-Host "Extracting company facts..."
 $factsPath = Get-ChildItem -Path research/sec -Filter "companyfacts_*.json" | Sort-Object -Property LastWriteTime -Descending | Select-Object -First 1
 if (-not $factsPath) {

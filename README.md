@@ -143,6 +143,12 @@ Summarize success/fail counts per endpoint from `research/sec/request_status.csv
 .\scripts\fetch_sec_status.ps1
 ```
 
+## SEC cache validation (PowerShell)
+Validate that the latest SEC JSON files are non-empty and parseable.
+```powershell
+.\scripts\validate_sec_files.ps1
+```
+
 ## Trim request status log (PowerShell)
 Keep only the last N days in `research/sec/request_status.csv`.
 ```powershell
