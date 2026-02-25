@@ -113,6 +113,12 @@ Restore cached `submissions_*.json` and `companyfacts_*.json` from the latest `c
 .\scripts\restore_sec_cache.ps1
 ```
 
+## Rotate fetch logs (PowerShell)
+Archive `outputs/fetch_status.md` and `outputs/fetch_errors.md` with timestamps.
+```powershell
+.\scripts\rotate_fetch_logs.ps1
+```
+
 ## SEC connectivity preflight (PowerShell)
 Ping `data.sec.gov` and `www.sec.gov/Archives` and record latency + status in `outputs/fetch_status.md`.
 ```powershell

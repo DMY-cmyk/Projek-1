@@ -113,6 +113,12 @@ Pulihkan `submissions_*.json` dan `companyfacts_*.json` dari folder `cache_backu
 .\scripts\restore_sec_cache.ps1
 ```
 
+## Rotasi log fetch (PowerShell)
+Arsipkan `outputs/fetch_status.md` dan `outputs/fetch_errors.md` dengan timestamp.
+```powershell
+.\scripts\rotate_fetch_logs.ps1
+```
+
 ## Preflight konektivitas SEC (PowerShell)
 Ping `data.sec.gov` dan `www.sec.gov/Archives` lalu catat latensi + status di `outputs/fetch_status.md`.
 ```powershell
