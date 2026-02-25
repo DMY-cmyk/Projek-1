@@ -1,5 +1,6 @@
 param(
-    [switch]$DryRun
+    [switch]$DryRun,
+    [switch]$IncludeHistory
 )
 
 Set-StrictMode -Version Latest
@@ -24,6 +25,9 @@ if (-not $files -or $files.Count -eq 0) {
 Write-Host "Outputs clean"
 Write-Host "-------------"
 foreach ($f in $files) {
+    if (-not $IncludeHistory -and ($f.Name -eq "run_history.csv" -or $f.Name -eq "run_summary.md")) {
+        continue
+    }
     if ($DryRun) {
         Write-Host ("DRY RUN: {0}" -f $f.Name)
     } else {

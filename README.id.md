@@ -126,10 +126,11 @@ Daftar file output beserta ukuran dan waktu modifikasi.
 ```
 
 ## Bersihkan outputs (PowerShell)
-Hapus `outputs/*.md` dan `outputs/*.json`. Gunakan `-DryRun` untuk pratinjau.
+Hapus `outputs/*.md` dan `outputs/*.json`. Gunakan `-DryRun` untuk pratinjau. Gunakan `-IncludeHistory` untuk menghapus `run_history.csv` dan `run_summary.md`.
 ```powershell
 .\scripts\clean_outputs.ps1 -DryRun
 .\scripts\clean_outputs.ps1
+.\scripts\clean_outputs.ps1 -IncludeHistory
 ```
 
 ## SEC fetch dengan retry (PowerShell)

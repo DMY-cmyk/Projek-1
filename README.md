@@ -126,10 +126,11 @@ List output files with size and last modified time.
 ```
 
 ## Clean outputs (PowerShell)
-Remove `outputs/*.md` and `outputs/*.json`. Use `-DryRun` to preview.
+Remove `outputs/*.md` and `outputs/*.json`. Use `-DryRun` to preview. Use `-IncludeHistory` to delete `run_history.csv` and `run_summary.md`.
 ```powershell
 .\scripts\clean_outputs.ps1 -DryRun
 .\scripts\clean_outputs.ps1
+.\scripts\clean_outputs.ps1 -IncludeHistory
 ```
 
 ## SEC fetch with retry (PowerShell)
