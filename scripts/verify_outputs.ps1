@@ -5,6 +5,11 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
+if (-not [System.IO.Path]::IsPathRooted($OutDir)) {
+    $repoRoot = Split-Path -Parent $PSScriptRoot
+    $OutDir = Join-Path $repoRoot $OutDir
+}
+
 if (-not (Test-Path $OutDir)) {
     Write-Host "No outputs directory found."
     exit 0
@@ -30,7 +35,7 @@ foreach ($name in $required) {
     }
 }
 
-$missing = $required | Where-Object { -not (Test-Path (Join-Path $OutDir $_)) }
+$missing = @($required | Where-Object { -not (Test-Path (Join-Path $OutDir $_)) })
 if ($missing.Count -gt 0) {
     Write-Error ("Missing required outputs: {0}" -f ($missing -join ", "))
     exit 1

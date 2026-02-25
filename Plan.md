@@ -165,7 +165,6 @@ Last updated: 2026-02-25
 - Export bundle and outputs manifest. (Completed; `outputs/export_bundle.zip`, `outputs/manifest.json`)
 - Cleanup dry-run plan. (Completed; `outputs/cleanup_plan.md`)
 - Fetch status summary and per-request status log. (Completed; `outputs/fetch_status.md`, `research/sec/request_status.csv`)
-esearch/sec/request_status.csv)
 - ForceFresh option to skip cached SEC JSONs. (Completed; `scripts/fetch_sec_sources.ps1`, `scripts/fetch_sec_retry.ps1`)
 - SEC connectivity preflight logging (data.sec.gov + archives). (Completed; `scripts/check_sec_connectivity.ps1`, `outputs/fetch_status.md`)
 - Fail-fast option for preflight failures. (Completed; `scripts/fetch_sec_retry.ps1`)
@@ -177,6 +176,7 @@ esearch/sec/request_status.csv)
 - SEC request status summary helper. (Completed; `scripts/fetch_sec_status.ps1`)
 - Request status log trimming helper. (Completed; `scripts/trim_request_status.ps1`)
 - SEC cache validation helper. (Completed; `scripts/validate_sec_files.ps1`)
+
 
 
 

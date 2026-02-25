@@ -144,7 +144,7 @@ Committee composition in the 2026 proxy shows continued emphasis on independent 
 ## Valuation Snapshot
 |AsOfDate|Price|MarketCapBillions|EnterpriseValueBillions|PE|EV_EBITDA|EV_FCF|P_FCF|BuybackYield|DividendYield|PayoutRatio|TotalPayoutRatio|
 |---|---|---|---|---|---|---|---|---|---|---|---|
-|2026-02-25|272.17|4083.8292|4050.0662|36.4595|27.9801|41.0063|41.3481|0.0222|0.0038|0.1377|0.9475|
+|2026-02-25|272.14|4083.3791|4049.6161|36.4555|27.977|41.0017|41.3436|0.0222|0.0038|0.1377|0.9475|
 
 ## Non-Recurring Items and Multiples
 - **FY2025 (latest year, used for snapshot multiples):** No material one-time items identified. The P/E of 35.4 and other multiples reflect clean operating earnings.

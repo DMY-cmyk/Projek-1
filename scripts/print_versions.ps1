@@ -23,8 +23,8 @@ function Get-CommandOutput([scriptblock]$Command) {
 
 $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
 $psVersion = $PSVersionTable.PSVersion.ToString()
-$psEdition = $PSVersionTable.PSEdition
-$psText = "$psVersion ($psEdition)"
+$psEditionName = $PSVersionTable.PSEdition
+$psText = "$psVersion ($psEditionName)"
 
 $gitText = Get-CommandOutput { & git --version }
 $rustcText = Get-CommandOutput { & rustc --version }
