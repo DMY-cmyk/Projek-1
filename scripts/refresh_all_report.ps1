@@ -45,3 +45,6 @@ $lines = @(
 
 $lines | Out-File -FilePath $summaryPath -Encoding utf8
 Write-Host "Wrote $summaryPath."
+
+Write-Host "Appending run history..."
+& powershell.exe -ExecutionPolicy Bypass -File scripts/append_run_history.ps1 -AsOfDate $AsOfDate -Price $Price -UserAgent $UserAgent

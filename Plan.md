@@ -141,6 +141,7 @@ Last updated: 2026-02-25
 - One-command refresh for SEC fetch + full report pack. (Completed; `scripts/refresh_all.ps1`)
 - One-command refresh (safe mode). (Completed; `scripts/refresh_all_safe.ps1`)
 - One-command refresh with run summary. (Completed; `scripts/refresh_all_report.ps1`)
+- Run history append helper. (Completed; `scripts/append_run_history.ps1`)
 - Dry-run refresh validation. (Completed; `scripts/refresh_all_dryrun.ps1`)
 - Report pack and CI report pack. (Completed; `scripts/build_report_pack.ps1`, `scripts/build_report_pack_ci.ps1`)
 - Dashboard, key events log, and quick review rollups. (Completed; `outputs/dashboard.md`, `outputs/key_events.md`, `outputs/quick_review.md`)

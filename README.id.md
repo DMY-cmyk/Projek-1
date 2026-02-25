@@ -107,6 +107,12 @@ Menjalankan safe refresh dan menulis `outputs/run_summary.md`.
 .\scripts\refresh_all_report.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
 ```
 
+## Riwayat run (PowerShell)
+Tambahkan metadata run ke `outputs/run_history.csv`.
+```powershell
+.\scripts\append_run_history.ps1 -AsOfDate 2026-02-20 -Price 264.58 -UserAgent "Name email@domain.com"
+```
+
 ## SEC fetch dengan retry (PowerShell)
 Ulangi fetch SEC dengan exponential backoff dan log error ke `outputs/fetch_errors.md`.
 ```powershell
