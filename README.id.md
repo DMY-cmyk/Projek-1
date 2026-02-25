@@ -119,6 +119,12 @@ Bandingkan dua run terakhir di `outputs/run_history.csv`.
 .\scripts\compare_run_history.ps1
 ```
 
+## Lihat run terbaru (PowerShell)
+Tampilkan N baris terakhir dari `outputs/run_history.csv`.
+```powershell
+.\scripts\list_recent_runs.ps1 -Count 5
+```
+
 ## Ringkasan output (PowerShell)
 Daftar file output beserta ukuran dan waktu modifikasi.
 ```powershell

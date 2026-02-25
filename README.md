@@ -119,6 +119,12 @@ Compare the last two runs in `outputs/run_history.csv`.
 .\scripts\compare_run_history.ps1
 ```
 
+## List recent runs (PowerShell)
+Show the last N rows of `outputs/run_history.csv`.
+```powershell
+.\scripts\list_recent_runs.ps1 -Count 5
+```
+
 ## Outputs summary (PowerShell)
 List output files with size and last modified time.
 ```powershell
