@@ -113,6 +113,12 @@ Append key run metadata to `outputs/run_history.csv`.
 .\scripts\append_run_history.ps1 -AsOfDate 2026-02-20 -Price 264.58 -UserAgent "Name email@domain.com"
 ```
 
+## Compare run history (PowerShell)
+Compare the last two runs in `outputs/run_history.csv`.
+```powershell
+.\scripts\compare_run_history.ps1
+```
+
 ## SEC fetch with retry (PowerShell)
 Retry SEC fetch with exponential backoff and log errors to `outputs/fetch_errors.md`.
 ```powershell

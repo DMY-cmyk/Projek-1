@@ -113,6 +113,12 @@ Tambahkan metadata run ke `outputs/run_history.csv`.
 .\scripts\append_run_history.ps1 -AsOfDate 2026-02-20 -Price 264.58 -UserAgent "Name email@domain.com"
 ```
 
+## Bandingkan riwayat run (PowerShell)
+Bandingkan dua run terakhir di `outputs/run_history.csv`.
+```powershell
+.\scripts\compare_run_history.ps1
+```
+
 ## SEC fetch dengan retry (PowerShell)
 Ulangi fetch SEC dengan exponential backoff dan log error ke `outputs/fetch_errors.md`.
 ```powershell
