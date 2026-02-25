@@ -148,6 +148,12 @@ Daftar helper yang tersedia beserta deskripsi singkat.
 .\scripts\print_help.ps1
 ```
 
+## Pencarian helper (PowerShell)
+Filter helper berdasarkan kata kunci.
+```powershell
+.\scripts\help_search.ps1 -Query "fetch"
+```
+
 ## Verifikasi output (PowerShell)
 Periksa keberadaan file output wajib setelah run.
 ```powershell

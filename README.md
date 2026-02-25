@@ -143,6 +143,12 @@ List available helper scripts with short descriptions.
 .\scripts\print_help.ps1
 ```
 
+## Helper search (PowerShell)
+Filter helpers by keyword.
+```powershell
+.\scripts\help_search.ps1 -Query "fetch"
+```
+
 ## Verify outputs (PowerShell)
 Check for required output files after a run.
 ```powershell

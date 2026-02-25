@@ -148,6 +148,7 @@ Last updated: 2026-02-25
 - Environment check helper. (Completed; `scripts/check_env.ps1`)
 - Input validation helper. (Completed; `scripts/validate_inputs.ps1`)
 - Helpers index script. (Completed; `scripts/print_help.ps1`)
+- Helper search script. (Completed; `scripts/help_search.ps1`)
 - Outputs verification helper. (Completed; `scripts/verify_outputs.ps1`)
 - Run history append helper. (Completed; `scripts/append_run_history.ps1`)
 - Run summary print helper. (Completed; `scripts/print_run_summary.ps1`)

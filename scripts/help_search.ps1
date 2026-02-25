@@ -1,12 +1,18 @@
+param(
+    [string]$Query
+)
+
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
-Write-Host "Projek-1 Helpers"
-Write-Host "----------------"
-@(
+if (-not $Query -or $Query.Trim().Length -eq 0) {
+    Write-Error "Query is required. Example: -Query \"fetch\""
+    exit 1
+}
+
+$helpers = @(
     @{ Name = "check_env.ps1"; Desc = "Check execution policy, toolchain, and required scripts." },
     @{ Name = "validate_inputs.ps1"; Desc = "Validate AsOfDate, Price, and User-Agent format." },
-    @{ Name = "help_search.ps1"; Desc = "Filter helper list by a keyword query." },
     @{ Name = "check_sec_connectivity.ps1"; Desc = "Preflight SEC endpoints and log latency/status." },
     @{ Name = "fetch_sec_retry.ps1"; Desc = "Fetch SEC data with retries and optional fail-fast." },
     @{ Name = "quick_run.ps1"; Desc = "Preflight + fetch + cache validation (no extraction)." },
@@ -32,6 +38,16 @@ Write-Host "----------------"
     @{ Name = "restore_sec_cache.ps1"; Desc = "Restore cached SEC JSONs from latest backup." },
     @{ Name = "health_check_fetch.ps1"; Desc = "Rotate logs + preflight + fetch + summary." },
     @{ Name = "fetch_sec_sources.ps1"; Desc = "Fetch SEC submissions/companyfacts and filings." }
-) | ForEach-Object {
-    Write-Host ("- {0}: {1}" -f $_.Name, $_.Desc)
+)
+
+$pattern = [regex]::Escape($Query)
+$matches = $helpers | Where-Object { $_.Name -match $pattern -or $_.Desc -match $pattern }
+
+if (-not $matches -or $matches.Count -eq 0) {
+    Write-Host "No helpers matched query."
+    exit 0
 }
+
+Write-Host "Helper matches"
+Write-Host "--------------"
+$matches | ForEach-Object { Write-Host ("- {0}: {1}" -f $_.Name, $_.Desc) }
