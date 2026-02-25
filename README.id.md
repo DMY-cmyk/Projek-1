@@ -107,6 +107,12 @@ Keluar langsung jika preflight gagal di kedua endpoint.
 .\scripts\fetch_sec_retry.ps1 -UserAgent "Name email@domain.com" -FailFast
 ```
 
+## Pulihkan cache SEC (PowerShell)
+Pulihkan `submissions_*.json` dan `companyfacts_*.json` dari folder `cache_backup_*` terbaru.
+```powershell
+.\scripts\restore_sec_cache.ps1
+```
+
 ## Preflight konektivitas SEC (PowerShell)
 Ping `data.sec.gov` dan `www.sec.gov/Archives` lalu catat latensi + status di `outputs/fetch_status.md`.
 ```powershell

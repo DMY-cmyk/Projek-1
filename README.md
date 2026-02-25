@@ -107,6 +107,12 @@ Exit immediately if preflight fails on both endpoints.
 .\scripts\fetch_sec_retry.ps1 -UserAgent "Name email@domain.com" -FailFast
 ```
 
+## Restore SEC cache (PowerShell)
+Restore cached `submissions_*.json` and `companyfacts_*.json` from the latest `cache_backup_*` folder.
+```powershell
+.\scripts\restore_sec_cache.ps1
+```
+
 ## SEC connectivity preflight (PowerShell)
 Ping `data.sec.gov` and `www.sec.gov/Archives` and record latency + status in `outputs/fetch_status.md`.
 ```powershell
