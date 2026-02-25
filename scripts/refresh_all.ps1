@@ -52,4 +52,7 @@ Write-Host "Computing valuation snapshot..."
 Write-Host "Building report pack..."
 & powershell.exe -ExecutionPolicy Bypass -File scripts/build_report_pack.ps1
 
+Write-Host "Capturing tool versions..."
+& powershell.exe -ExecutionPolicy Bypass -File scripts/print_versions.ps1
+
 Write-Host "Done. All outputs refreshed."

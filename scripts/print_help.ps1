@@ -25,6 +25,7 @@ Write-Host "----------------"
     @{ Name = "clean_outputs.ps1"; Desc = "Remove outputs/*.md and *.json (optional include history)." },
     @{ Name = "rotate_fetch_logs.ps1"; Desc = "Archive fetch_status.md and fetch_errors.md." },
     @{ Name = "print_fetch_summary.ps1"; Desc = "Summarize fetch status and last error." },
+    @{ Name = "print_versions.ps1"; Desc = "Write PowerShell, Git, and Rust versions to outputs/versions.md." },
     @{ Name = "fetch_sec_status.ps1"; Desc = "Summarize request_status.csv by endpoint." },
     @{ Name = "trim_request_status.ps1"; Desc = "Trim request_status.csv to last N days." },
     @{ Name = "verify_sec_cache.ps1"; Desc = "Check latest SEC cache age." },

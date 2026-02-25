@@ -15,7 +15,8 @@ $required = @(
     "run_log.md",
     "summary.json",
     "manifest.json",
-    "freshness_report.md"
+    "freshness_report.md",
+    "versions.md"
 )
 
 Write-Host "Outputs Verification"

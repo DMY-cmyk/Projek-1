@@ -42,7 +42,8 @@ $lines = @(
     "- outputs/run_log.md",
     "- outputs/fetch_status.md",
     "- outputs/fetch_errors.md",
-    "- outputs/summary.json"
+    "- outputs/summary.json",
+    "- outputs/versions.md"
 )
 
 $lines | Out-File -FilePath $summaryPath -Encoding utf8
@@ -50,3 +51,6 @@ Write-Host "Wrote $summaryPath."
 
 Write-Host "Appending run history..."
 & powershell.exe -ExecutionPolicy Bypass -File scripts/append_run_history.ps1 -AsOfDate $AsOfDate -Price $Price -UserAgent $UserAgent
+
+Write-Host "Capturing tool versions..."
+& powershell.exe -ExecutionPolicy Bypass -File scripts/print_versions.ps1

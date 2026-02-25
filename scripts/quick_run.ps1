@@ -22,4 +22,7 @@ if ($ForceFresh) { $forceFreshArg = @("-ForceFresh") }
 Write-Host "Validating SEC cache..."
 & powershell.exe -ExecutionPolicy Bypass -File scripts/validate_sec_files.ps1
 
+Write-Host "Capturing tool versions..."
+& powershell.exe -ExecutionPolicy Bypass -File scripts/print_versions.ps1
+
 Write-Host "Quick run completed."
