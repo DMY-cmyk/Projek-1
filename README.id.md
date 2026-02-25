@@ -142,6 +142,12 @@ Validasi format `-AsOfDate`, `-Price`, dan User-Agent.
 .\scripts\validate_inputs.ps1 -AsOfDate 2026-02-20 -Price 264.58 -UserAgent "Name email@domain.com"
 ```
 
+## Indeks helper (PowerShell)
+Daftar helper yang tersedia beserta deskripsi singkat.
+```powershell
+.\scripts\print_help.ps1
+```
+
 ## Verifikasi output (PowerShell)
 Periksa keberadaan file output wajib setelah run.
 ```powershell

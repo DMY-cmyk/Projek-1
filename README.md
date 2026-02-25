@@ -137,6 +137,12 @@ Validate `-AsOfDate`, `-Price`, and User-Agent format.
 .\scripts\validate_inputs.ps1 -AsOfDate 2026-02-20 -Price 264.58 -UserAgent "Name email@domain.com"
 ```
 
+## Helpers index (PowerShell)
+List available helper scripts with short descriptions.
+```powershell
+.\scripts\print_help.ps1
+```
+
 ## Verify outputs (PowerShell)
 Check for required output files after a run.
 ```powershell
