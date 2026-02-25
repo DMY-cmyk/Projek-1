@@ -125,6 +125,13 @@ Daftar file output beserta ukuran dan waktu modifikasi.
 .\scripts\summarize_outputs.ps1
 ```
 
+## Bersihkan outputs (PowerShell)
+Hapus `outputs/*.md` dan `outputs/*.json`. Gunakan `-DryRun` untuk pratinjau.
+```powershell
+.\scripts\clean_outputs.ps1 -DryRun
+.\scripts\clean_outputs.ps1
+```
+
 ## SEC fetch dengan retry (PowerShell)
 Ulangi fetch SEC dengan exponential backoff dan log error ke `outputs/fetch_errors.md`.
 ```powershell

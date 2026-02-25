@@ -125,6 +125,13 @@ List output files with size and last modified time.
 .\scripts\summarize_outputs.ps1
 ```
 
+## Clean outputs (PowerShell)
+Remove `outputs/*.md` and `outputs/*.json`. Use `-DryRun` to preview.
+```powershell
+.\scripts\clean_outputs.ps1 -DryRun
+.\scripts\clean_outputs.ps1
+```
+
 ## SEC fetch with retry (PowerShell)
 Retry SEC fetch with exponential backoff and log errors to `outputs/fetch_errors.md`.
 ```powershell
