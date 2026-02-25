@@ -101,6 +101,12 @@ Menjalankan preflight + validasi cache sebelum ekstraksi.
 .\scripts\refresh_all_safe.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
 ```
 
+## One-command refresh (aman + ringkasan)
+Menjalankan safe refresh dan menulis `outputs/run_summary.md`.
+```powershell
+.\scripts\refresh_all_report.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
+```
+
 ## SEC fetch dengan retry (PowerShell)
 Ulangi fetch SEC dengan exponential backoff dan log error ke `outputs/fetch_errors.md`.
 ```powershell
