@@ -102,7 +102,7 @@ Ulangi fetch SEC dengan exponential backoff dan log error ke `outputs/fetch_erro
 ```
 
 ## Preflight konektivitas SEC (PowerShell)
-Ping `data.sec.gov` dan catat latensi + status di `outputs/fetch_status.md`.
+Ping `data.sec.gov` dan `www.sec.gov/Archives` lalu catat latensi + status di `outputs/fetch_status.md`.
 ```powershell
 .\scripts\check_sec_connectivity.ps1 -UserAgent "Name email@domain.com"
 ```
