@@ -119,6 +119,12 @@ Archive `outputs/fetch_status.md` and `outputs/fetch_errors.md` with timestamps.
 .\scripts\rotate_fetch_logs.ps1
 ```
 
+## Fetch summary (PowerShell)
+Print a one-screen summary from `outputs/fetch_status.md` and `outputs/fetch_errors.md`.
+```powershell
+.\scripts\print_fetch_summary.ps1
+```
+
 ## SEC connectivity preflight (PowerShell)
 Ping `data.sec.gov` and `www.sec.gov/Archives` and record latency + status in `outputs/fetch_status.md`.
 ```powershell

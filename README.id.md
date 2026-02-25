@@ -119,6 +119,12 @@ Arsipkan `outputs/fetch_status.md` dan `outputs/fetch_errors.md` dengan timestam
 .\scripts\rotate_fetch_logs.ps1
 ```
 
+## Ringkasan fetch (PowerShell)
+Cetak ringkasan satu layar dari `outputs/fetch_status.md` dan `outputs/fetch_errors.md`.
+```powershell
+.\scripts\print_fetch_summary.ps1
+```
+
 ## Preflight konektivitas SEC (PowerShell)
 Ping `data.sec.gov` dan `www.sec.gov/Archives` lalu catat latensi + status di `outputs/fetch_status.md`.
 ```powershell

@@ -154,6 +154,7 @@ esearch/sec/request_status.csv)
 - Fail-fast option for preflight failures. (Completed; `scripts/fetch_sec_retry.ps1`)
 - Cache restore helper for SEC JSONs. (Completed; `scripts/restore_sec_cache.ps1`)
 - Fetch log rotation helper. (Completed; `scripts/rotate_fetch_logs.ps1`)
+- Fetch summary helper for quick diagnostics. (Completed; `scripts/print_fetch_summary.ps1`)
 
 
 
