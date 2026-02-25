@@ -23,3 +23,6 @@ Write-Host "Outputs summary..."
 
 Write-Host "Fetch summary..."
 & powershell.exe -ExecutionPolicy Bypass -File scripts/print_fetch_summary.ps1
+
+Write-Host "Exporting run bundle..."
+& powershell.exe -ExecutionPolicy Bypass -File scripts/export_run_bundle.ps1

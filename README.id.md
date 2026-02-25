@@ -113,8 +113,17 @@ Menjalankan `refresh_all_report.ps1` lalu mencetak ringkasan output dan fetch.
 .\scripts\refresh_and_report.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
 ```
 
-Menjalankan safe refresh dan menulis `outputs/run_summary.md`.
+## Export run bundle (PowerShell)
+Zip artefak run utama ke `outputs/run_bundle.zip`.
 ```powershell
+.\scripts\export_run_bundle.ps1
+```
+
+Menjalankan `refresh_all_report.ps1` lalu mencetak ringkasan output dan fetch.
+```powershell
+.\scripts\refresh_and_report.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
+```
+
 .\scripts\refresh_all_report.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
 ```
 
