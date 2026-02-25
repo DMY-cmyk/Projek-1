@@ -184,3 +184,15 @@ Last updated: 2026-02-25
 
 
 
+## 18) Next execution roadmap (post-foundation)
+- Unblock Rust toolchain on this machine by installing MSVC Build Tools (`link.exe`) and re-run `cargo run -- --help`. (Completed; Build Tools + VC linker installed and verified)
+- Add scheduled refresh automation (daily/weekly) for `scripts/refresh_all_report.ps1` with run-log retention. (Completed; scheduled tasks `Projek1-RefreshWeekly` and `Projek1-PeerMaintenanceWeekly`)
+- Harden market price ingestion with fallback providers and explicit source timestamp logging in `research/market_price_source.txt`. (Completed; `scripts/get_latest_price.ps1`, `scripts/refresh_with_auto_price.ps1`)
+- Extend Rust orchestration to operational parity with PowerShell `refresh_all_report.ps1` flow (verification + run history + bundle). (Completed; `src/pipeline.rs` now calls refresh + verify + export bundle)
+- Add regression tests for critical scripts (`verify_outputs.ps1`, `print_versions.ps1`, SEC retry paths) and wire CI gate to fail on regressions. (Completed; `scripts/run_regression_checks.ps1`, `scripts/build_report_pack_ci.ps1`, `.github/workflows/report-pack-ci.yml`)
+- Define peer-data maintenance cadence and validation checks for `data/peer_multiples.csv` and `data/peer_fundamentals.csv`. (Completed; `scripts/verify_peer_data.ps1`, `scripts/peer_maintenance.ps1`, weekly schedule)
+
+## 19) Next strategic work (remaining)
+- Add automated refresh for `data/peer_fundamentals.csv` from authoritative sources (matching current peer multiples cadence). (Pending)
+- Add Rust integration tests for `run-pipeline` to verify end-to-end orchestration behavior under CI. (Pending)
+- Add scheduler run outcome logging/alerts (success/failure summary) to reduce silent maintenance drift. (Pending)

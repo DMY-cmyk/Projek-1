@@ -1,7 +1,7 @@
 # Projek-1
 Docs updated: 2026-02-25
 
-Rust workspace centered on a detailed plan to analyze Apple Inc. fundamentals using SEC `data.sec.gov` APIs. The code is a minimal starter binary and can be expanded into a data-fetching and analysis tool.
+Rust workspace centered on a detailed plan to analyze Apple Inc. fundamentals using SEC `data.sec.gov` APIs. The project already includes an operational PowerShell pipeline plus Rust CLI commands for SEC fetch and end-to-end runs.
 
 ## Contents
 - `src/main.rs` starter binary.
@@ -115,6 +115,12 @@ Runs safe refresh and fails if required outputs are missing.
 Runs safe refresh and writes `outputs/run_summary.md`.
 ```powershell
 .\scripts\refresh_all_report.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
+```
+
+## One-command refresh (auto market price)
+Resolves latest price from fallback sources and logs provider metadata to `research/market_price_source.txt`.
+```powershell
+.\scripts\refresh_with_auto_price.ps1 -UserAgent "Name email@domain.com" -AsOfDate 2026-02-25
 ```
 
 ## Refresh + report (PowerShell)
@@ -333,6 +339,12 @@ Run all generators and fail on error; log to `outputs/run_log_ci.md`.
 .\scripts\build_report_pack_ci.ps1
 ```
 
+## Regression checks (PowerShell)
+Run guard checks for critical scripts (`verify_outputs`, `print_versions`, SEC retry flags).
+```powershell
+.\scripts\run_regression_checks.ps1
+```
+
 ## Sanity checks (PowerShell)
 Validate basic relationships in `outputs/sanity_checks.md`.
 ```powershell
@@ -362,6 +374,13 @@ Append snapshot rows to `outputs/benchmark_history.csv`.
 ```powershell
 .\scripts\append_benchmark_history.ps1
 ```
+
+## Register maintenance tasks (PowerShell)
+Create/update weekly scheduled tasks for auto refresh and peer maintenance.
+```powershell
+.\scripts\register_maintenance_tasks.ps1 -UserAgent "Name email@domain.com"
+```
+
 ## Peer multiples refresh (PowerShell)
 Fetch latest peer multiples (best-effort HTML parsing) into `data/peer_multiples.csv`.
 ```powershell
@@ -408,7 +427,6 @@ Run these in order after setting a real SEC User-Agent.
 - Validate SEC data against filings and log API requests.
 
 ## Next steps
-- Rust module for SEC fetch/caching has been added (`cargo run -- fetch-sec`).
-- Charts can be generated from `data/` via `scripts/build_charts.ps1`.
-- Peer multiples data is tracked in `data/peer_multiples.csv` with sources in `research/peer_multiples_sources.md`.
-- Peer fundamentals are tracked in `data/peer_fundamentals.csv` with sources in `research/peer_fundamentals_sources.md`.
+- Keep monitoring scheduled task runs (`Projek1-RefreshWeekly`, `Projek1-PeerMaintenanceWeekly`) and adjust cadence if needed.
+- Extend peer maintenance to auto-refresh `data/peer_fundamentals.csv` from authoritative sources.
+- Add end-to-end Rust tests for `run-pipeline` once CI environment includes SEC-friendly network/user-agent configuration.

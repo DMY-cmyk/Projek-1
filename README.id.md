@@ -1,7 +1,7 @@
 # Projek-1
 Dokumen diperbarui: 2026-02-25
 
-Workspace Rust yang berpusat pada rencana detail untuk menganalisis fundamental Apple Inc. menggunakan API SEC `data.sec.gov`. Kode ini adalah binary starter minimal dan dapat diperluas menjadi alat pengambilan data dan analisis.
+Workspace Rust yang berpusat pada rencana detail untuk menganalisis fundamental Apple Inc. menggunakan API SEC `data.sec.gov`. Proyek ini sudah memiliki pipeline PowerShell operasional plus perintah Rust CLI untuk fetch SEC dan run end-to-end.
 
 ## Isi
 - `src/main.rs` binary starter.
@@ -115,6 +115,12 @@ Menjalankan safe refresh dan gagal jika output wajib tidak ada.
 Menjalankan safe refresh dan menulis `outputs/run_summary.md`.
 ```powershell
 .\scripts\refresh_all_report.ps1 -UserAgent "Name email@domain.com" -Price 264.58 -AsOfDate 2026-02-20
+```
+
+## One-command refresh (harga pasar otomatis)
+Ambil harga terbaru dari fallback source dan simpan metadata sumber ke `research/market_price_source.txt`.
+```powershell
+.\scripts\refresh_with_auto_price.ps1 -UserAgent "Name email@domain.com" -AsOfDate 2026-02-25
 ```
 
 ## Refresh + report (PowerShell)
@@ -333,6 +339,12 @@ Jalankan semua generator dan gagal jika ada error; log ke `outputs/run_log_ci.md
 .\scripts\build_report_pack_ci.ps1
 ```
 
+## Regression checks (PowerShell)
+Jalankan guard check untuk skrip kritis (`verify_outputs`, `print_versions`, flag retry SEC).
+```powershell
+.\scripts\run_regression_checks.ps1
+```
+
 ## Sanity checks (PowerShell)
 Validasi relasi dasar di `outputs/sanity_checks.md`.
 ```powershell
@@ -362,6 +374,13 @@ Tambahkan baris snapshot ke `outputs/benchmark_history.csv`.
 ```powershell
 .\scripts\append_benchmark_history.ps1
 ```
+
+## Daftarkan task maintenance (PowerShell)
+Buat/perbarui task mingguan untuk auto refresh dan maintenance peer.
+```powershell
+.\scripts\register_maintenance_tasks.ps1 -UserAgent "Name email@domain.com"
+```
+
 ## Refresh multiple peer (PowerShell)
 Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
 ```powershell
@@ -408,7 +427,6 @@ Jalankan ini berurutan setelah mengatur User-Agent SEC yang valid.
 - Validasi data SEC terhadap filing dan catat permintaan API.
 
 ## Langkah berikutnya
-- Modul Rust untuk pengambilan/cache SEC sudah ditambahkan (`cargo run -- fetch-sec`).
-- Grafik dapat dihasilkan dari `data/` melalui `scripts/build_charts.ps1`.
-- Data multiple peer disimpan di `data/peer_multiples.csv` dengan sumber di `research/peer_multiples_sources.md`.
-- Data fundamental peer disimpan di `data/peer_fundamentals.csv` dengan sumber di `research/peer_fundamentals_sources.md`.
+- Pantau hasil task scheduler (`Projek1-RefreshWeekly`, `Projek1-PeerMaintenanceWeekly`) dan sesuaikan cadence bila diperlukan.
+- Kembangkan maintenance peer agar juga me-refresh otomatis `data/peer_fundamentals.csv` dari sumber primer.
+- Tambahkan test end-to-end Rust untuk `run-pipeline` saat environment CI sudah punya konfigurasi network/user-agent SEC yang aman.

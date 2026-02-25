@@ -16,3 +16,4 @@ credentials.json
 token.json
 *token*.json
 .claude/settings.local.json
+research/sec_user_agent.txt

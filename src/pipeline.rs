@@ -1,6 +1,5 @@
-use crate::sec_api::{fetch_sec, FetchOptions};
 use anyhow::{Context, Result};
-use std::path::{Path, PathBuf};
+use std::path::PathBuf;
 use std::process::Command;
 
 pub struct PipelineOptions {
@@ -14,41 +13,26 @@ pub struct PipelineOptions {
 }
 
 pub fn run_pipeline(opts: PipelineOptions) -> Result<()> {
-    fetch_sec(FetchOptions {
-        cik: opts.cik.clone(),
-        out_dir: opts.out_dir.clone(),
-        user_agent: opts.user_agent,
-        refresh: opts.refresh,
-        max_per_sec: opts.max_per_sec,
-    })?;
+    // Reserved for future direct Rust fetch orchestration; current flow delegates to PowerShell pipeline.
+    let _ = (&opts.cik, &opts.out_dir, opts.max_per_sec);
 
-    let cik = normalize_cik(&opts.cik)?;
-    let companyfacts_path = opts
-        .out_dir
-        .join(format!("companyfacts_{cik}.json"));
-
+    let mut refresh_args = vec![
+        "-UserAgent".to_string(),
+        opts.user_agent.clone(),
+        "-Price".to_string(),
+        format!("{:.4}", opts.price),
+        "-AsOfDate".to_string(),
+        opts.as_of_date.clone(),
+    ];
+    if opts.refresh {
+        refresh_args.push("-ForceFresh".to_string());
+    }
     run_ps(
-        "scripts/extract_companyfacts.ps1",
-        &[
-            "-CompanyFactsPath",
-            companyfacts_path
-                .to_str()
-                .context("companyfacts path")?,
-        ],
+        "scripts/refresh_all_report.ps1",
+        &refresh_args.iter().map(String::as_str).collect::<Vec<_>>(),
     )?;
-    run_ps("scripts/compute_metrics.ps1", &[])?;
-    run_ps("scripts/validate_financials.ps1", &[])?;
-    run_ps(
-        "scripts/compute_valuation.ps1",
-        &[
-            "-Price",
-            &format!("{:.2}", opts.price),
-            "-AsOfDate",
-            &opts.as_of_date,
-        ],
-    )?;
-    run_ps("scripts/build_report.ps1", &[])?;
-    run_ps("scripts/build_charts.ps1", &[])?;
+    run_ps("scripts/verify_outputs.ps1", &[])?;
+    run_ps("scripts/build_export_bundle.ps1", &[])?;
 
     Ok(())
 }
@@ -68,13 +52,4 @@ fn run_ps(script: &str, args: &[&str]) -> Result<()> {
         anyhow::bail!("{script} failed with status {status}");
     }
     Ok(())
-}
-
-fn normalize_cik(cik: &str) -> Result<String> {
-    let trimmed = cik.trim().trim_start_matches("CIK");
-    let digits: String = trimmed.chars().filter(|c| c.is_ascii_digit()).collect();
-    if digits.is_empty() {
-        anyhow::bail!("CIK is empty or invalid");
-    }
-    Ok(format!("{:0>10}", digits))
 }

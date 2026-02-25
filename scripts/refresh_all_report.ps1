@@ -1,8 +1,10 @@
 param(
     [string]$UserAgent,
-    [double]$Price = 264.58,
+    [Nullable[double]]$Price = $null,
     [string]$AsOfDate = "2026-02-20",
-    [switch]$ForceFresh
+    [switch]$ForceFresh,
+    [switch]$AutoPrice,
+    [string]$Symbol = "AAPL"
 )
 
 Set-StrictMode -Version Latest
@@ -11,6 +13,12 @@ $ErrorActionPreference = "Stop"
 if (-not $UserAgent -or $UserAgent.Trim().Length -lt 6) {
     Write-Error "UserAgent is required. Example: -UserAgent \"Name email@domain.com\""
     exit 1
+}
+
+if ($AutoPrice -or -not $Price) {
+    $resolvedPriceText = & powershell.exe -ExecutionPolicy Bypass -File scripts/get_latest_price.ps1 -Symbol $Symbol
+    $Price = [double]$resolvedPriceText
+    Write-Host ("Resolved market price for {0}: {1}" -f $Symbol, $Price)
 }
 
 & powershell.exe -ExecutionPolicy Bypass -File scripts/validate_inputs.ps1 -AsOfDate $AsOfDate -Price $Price -UserAgent $UserAgent
