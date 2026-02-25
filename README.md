@@ -143,6 +143,12 @@ Summarize success/fail counts per endpoint from `research/sec/request_status.csv
 .\scripts\fetch_sec_status.ps1
 ```
 
+## Trim request status log (PowerShell)
+Keep only the last N days in `research/sec/request_status.csv`.
+```powershell
+.\scripts\trim_request_status.ps1 -MaxAgeDays 30
+```
+
 ## SEC connectivity preflight (PowerShell)
 Ping `data.sec.gov` and `www.sec.gov/Archives` and record latency + status in `outputs/fetch_status.md`.
 ```powershell

@@ -143,6 +143,12 @@ Ringkas jumlah sukses/gagal per endpoint dari `research/sec/request_status.csv`.
 .\scripts\fetch_sec_status.ps1
 ```
 
+## Pangkas log status request (PowerShell)
+Simpan hanya N hari terakhir di `research/sec/request_status.csv`.
+```powershell
+.\scripts\trim_request_status.ps1 -MaxAgeDays 30
+```
+
 ## Preflight konektivitas SEC (PowerShell)
 Ping `data.sec.gov` dan `www.sec.gov/Archives` lalu catat latensi + status di `outputs/fetch_status.md`.
 ```powershell
