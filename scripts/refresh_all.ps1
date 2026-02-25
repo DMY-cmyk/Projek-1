@@ -14,6 +14,18 @@ if (-not $UserAgent -or $UserAgent.Trim().Length -lt 6) {
 
 Write-Host "Refreshing SEC sources..."
 & powershell.exe -ExecutionPolicy Bypass -File scripts/fetch_sec_retry.ps1 -UserAgent $UserAgent
+if (Test-Path "outputs/fetch_status.md") {
+    $freshLine = (Get-Content "outputs/fetch_status.md" | Select-String -Pattern "^\* Fresh data used:").Line
+    if ($freshLine) {
+        if ($freshLine -match "true") {
+            Write-Host "SEC fetch status: fresh data used."
+        } else {
+            Write-Host "SEC fetch status: cached data used."
+        }
+    } else {
+        Write-Host "SEC fetch status written to outputs/fetch_status.md."
+    }
+}
 
 Write-Host "Extracting company facts..."
 $factsPath = Get-ChildItem -Path research/sec -Filter "companyfacts_*.json" | Sort-Object -Property LastWriteTime -Descending | Select-Object -First 1

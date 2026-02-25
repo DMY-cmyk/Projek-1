@@ -1,5 +1,5 @@
 # Projek-1
-Dokumen diperbarui: 2026-02-24
+Dokumen diperbarui: 2026-02-25
 
 Workspace Rust yang berpusat pada rencana detail untuk menganalisis fundamental Apple Inc. menggunakan API SEC `data.sec.gov`. Kode ini adalah binary starter minimal dan dapat diperluas menjadi alat pengambilan data dan analisis.
 
@@ -99,6 +99,18 @@ Ambil data SEC dan jalankan report pack dalam satu perintah.
 Ulangi fetch SEC dengan exponential backoff dan log error ke `outputs/fetch_errors.md`.
 ```powershell
 .\scripts\fetch_sec_retry.ps1 -UserAgent "Name email@domain.com" -MaxAttempts 3 -BaseDelaySeconds 5
+```
+
+## Preflight konektivitas SEC (PowerShell)
+Ping `data.sec.gov` dan catat latensi + status di `outputs/fetch_status.md`.
+```powershell
+.\scripts\check_sec_connectivity.ps1 -UserAgent "Name email@domain.com"
+```
+
+## SEC fetch (paksa fresh, tanpa cache)
+Lewati cache `submissions_*.json` dan `companyfacts_*.json` jika download gagal.
+```powershell
+.\scripts\fetch_sec_retry.ps1 -UserAgent "Name email@domain.com" -ForceFresh
 ```
 
 ## One-command refresh (dry run)
@@ -218,6 +230,8 @@ Jalankan ini berurutan setelah mengatur User-Agent SEC yang valid.
 - `outputs/report.md` draf laporan yang dirakit dari tabel.
 - `models/dcf_base_case.csv` dan `models/dcf_summary.md` DCF ilustratif.
 - `research/notes_debt_liquidity.md` catatan jatuh tempo utang dan sensitivitas bunga.
+- `outputs/fetch_status.md` status fetch SEC (fresh vs cached).
+- `research/sec/request_status.csv` status per request dan ringkasan error.
 
 ## Pemecahan masalah
 - Jika permintaan ke SEC gagal, pastikan User-Agent berisi nama + email yang nyata dan coba lagi.

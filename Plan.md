@@ -1,5 +1,5 @@
 # Detailed Plan to Analyze Apple Inc. Fundamentals
-Last updated: 2026-02-24
+Last updated: 2026-02-25
 
 ## 0) Parameters and setup
 - Analysis date: 2025-01-01. (Completed; `analysis_config.toml`)
@@ -48,7 +48,7 @@ Last updated: 2026-02-24
 
 ## 4) Clean and reconcile
 - Check totals vs subtotals (segment sums, geography sums). (Completed; `data/reconciliation_notes.md`)
-- Adjust for any accounting changes or reclassifications. (Completed; no adjustments needed â€” all accounting standard changes predate FY2021 window; see `data/one_time_items_notes.md`)
+- Adjust for any accounting changes or reclassifications. (Completed; no adjustments needed — all accounting standard changes predate FY2021 window; see `data/one_time_items_notes.md`)
 - Confirm annual totals match SEC facts periods and fiscal year end dates. (Completed; automated checks)
 - Flag one-time items (legal settlements, tax benefits, impairments). (Completed; `data/one_time_items_notes.md`)
 - Basic null/consistency checks report: `data/validation_report.txt` (Completed; `scripts/validate_financials.ps1`)
@@ -147,6 +147,12 @@ Last updated: 2026-02-24
 - Peer benchmarking snapshot and history. (Completed; `outputs/benchmark_snapshot.md`, `outputs/benchmark_history.csv`)
 - Export bundle and outputs manifest. (Completed; `outputs/export_bundle.zip`, `outputs/manifest.json`)
 - Cleanup dry-run plan. (Completed; `outputs/cleanup_plan.md`)
+- Fetch status summary and per-request status log. (Completed; `outputs/fetch_status.md`, `research/sec/request_status.csv`)
+esearch/sec/request_status.csv)
+- ForceFresh option to skip cached SEC JSONs. (Completed; `scripts/fetch_sec_sources.ps1`, `scripts/fetch_sec_retry.ps1`)
+- SEC connectivity preflight logging. (Completed; `scripts/check_sec_connectivity.ps1`, `outputs/fetch_status.md`)
+
+
 
 
 

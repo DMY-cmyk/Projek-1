@@ -11,7 +11,7 @@
 ## Market Snapshot
 |AsOfDate|Price|MarketCapBillions|EnterpriseValueBillions|PE|EV_EBITDA|EV_FCF|P_FCF|BuybackYield|DividendYield|
 |---|---|---|---|---|---|---|---|---|---|
-|2026-02-20|264.58|3969.9435|3936.1805|35.4428|27.1933|39.8532|40.195|0.0228|0.0039|
+|2026-02-25|272.17|4083.8292|4050.0662|36.4595|27.9801|41.0063|41.3481|0.0222|0.0038|
 
 ## KPI Trend (Annual)
 Charts source: outputs/charts/ (run scripts/build_charts.ps1).

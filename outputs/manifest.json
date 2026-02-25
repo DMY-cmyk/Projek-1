@@ -1,75 +1,81 @@
 ﻿[
     {
         "path":  "outputs\\benchmark_history.csv",
-        "size_bytes":  394,
-        "sha256":  "A908CA4C6AC9D79404A0412A4A11D28F20930375EB76A28665DE3A9747BA9713",
-        "modified":  "2026-02-24 22:55:29"
+        "size_bytes":  1038,
+        "sha256":  "9F7308E4B9A4C0CC128D7552CFDBD6EF5BF368527CC4C3BA191A70B79D4157F7",
+        "modified":  "2026-02-24 22:56:13"
     },
     {
         "path":  "outputs\\benchmark_snapshot.md",
         "size_bytes":  792,
-        "sha256":  "8CDDE370DEFCD7E15C504B4931753576186B5E6C3A6ABB147F67E7E59A2EC8D6",
-        "modified":  "2026-02-24 22:53:20"
+        "sha256":  "505F28BEA3F8890E7CF982142699678D16226C132FF7E03703AE2DA8EE6A5FB5",
+        "modified":  "2026-02-25 13:27:25"
     },
     {
         "path":  "outputs\\change_log.md",
         "size_bytes":  652,
         "sha256":  "21764F781BBF6E94DC1A6890A794415443BCCED40B7F409BF99AD02D53735F24",
-        "modified":  "2026-02-24 22:55:39"
+        "modified":  "2026-02-25 13:45:29"
     },
     {
         "path":  "outputs\\cleanup_plan.md",
         "size_bytes":  187,
-        "sha256":  "51203E240E512AAED50E9F4B394AD7367BE8BABB3FA14C47EBD0406830C851C8",
-        "modified":  "2026-02-24 22:55:41"
+        "sha256":  "6165D472CD205BEFBA8522F429D49C280BD60EBD0F274606802245164C6A9783",
+        "modified":  "2026-02-25 13:45:30"
     },
     {
         "path":  "outputs\\dashboard.md",
-        "size_bytes":  2848,
-        "sha256":  "7EBAC357D142F107FA3CF5A281F1E0B8EFCFB6EB363520B3A31DC03015AD9589",
-        "modified":  "2026-02-24 22:55:38"
+        "size_bytes":  2849,
+        "sha256":  "A738662EC037E6AE9DBDFC81D252E4D969F1E2F78A6988CA4329816F85A54401",
+        "modified":  "2026-02-25 13:45:27"
     },
     {
         "path":  "outputs\\data_dictionary.md",
         "size_bytes":  6293,
         "sha256":  "46B9E42A9F859C2A3EE451594DC06BE6C54DF19D91A51438BA519B47FCDD3FEB",
-        "modified":  "2026-02-24 22:53:19"
+        "modified":  "2026-02-25 13:27:24"
     },
     {
         "path":  "outputs\\drift_alerts.md",
         "size_bytes":  469,
         "sha256":  "A15EF3BBC44A3D3BE16C1D06B9FD4CD33C69BE5F74A054094D6835DFC72AA4FC",
-        "modified":  "2026-02-24 22:55:40"
+        "modified":  "2026-02-25 13:45:29"
     },
     {
         "path":  "outputs\\export_bundle.zip",
-        "size_bytes":  15650,
-        "sha256":  "F60D1C5ABF5259F6B829DA9A9A47C0F4EC6FD72328CD99458017D60FE49954D6",
-        "modified":  "2026-02-24 22:55:43"
+        "size_bytes":  16529,
+        "sha256":  "0B2500B6486409413348E6694540F41DF0499A2B38DB81FF0990F4D7E9167F1E",
+        "modified":  "2026-02-25 13:45:32"
+    },
+    {
+        "path":  "outputs\\fetch_status.md",
+        "size_bytes":  212,
+        "sha256":  "1FE124D2EB52B46FAC73C9DDBC3982E8CA03B3093E982C3B01A5669427474921",
+        "modified":  "2026-02-25 13:45:20"
     },
     {
         "path":  "outputs\\freshness_report.md",
-        "size_bytes":  512,
-        "sha256":  "0A1DF0B78E615266BBE8E52231B4FFE5A63C0B312F346F732523FFD7074AEA08",
-        "modified":  "2026-02-24 22:55:39"
+        "size_bytes":  513,
+        "sha256":  "0D3AC756B7764DF1B1907C6C22C4DC9CB3E5C26305B850CBB881158E9AC5C985",
+        "modified":  "2026-02-25 13:45:29"
     },
     {
         "path":  "outputs\\health_check.md",
         "size_bytes":  819,
-        "sha256":  "7A540A306489247161E763F71028D4153D794ED2648043D7B99CB46A68A36BA4",
-        "modified":  "2026-02-24 22:55:41"
+        "sha256":  "A96FAAAB9DAFCAB0D7419B106D0B7F0F8D43F55AEC633764B853FCA690FA5306",
+        "modified":  "2026-02-25 13:45:31"
     },
     {
         "path":  "outputs\\key_events.md",
         "size_bytes":  1168,
         "sha256":  "289B2D7C02F6995670A40D1DB303B13A242A7838167EAFCE6B7B25841C798DF2",
-        "modified":  "2026-02-24 22:55:38"
+        "modified":  "2026-02-25 13:45:28"
     },
     {
         "path":  "outputs\\manifest.json",
-        "size_bytes":  6330,
-        "sha256":  "9D3927136BC94CF6EAE3EDBCE090453BFB2CD60BF16F319FE6F116428835BE8F",
-        "modified":  "2026-02-24 22:53:19"
+        "size_bytes":  6559,
+        "sha256":  "45B4A6ACF0FCE842B7BEA6BE890B899C2F7A1005ED03E05EF0F2648466F67C7D",
+        "modified":  "2026-02-25 13:27:22"
     },
     {
         "path":  "outputs\\quick_review.md",
@@ -85,15 +91,15 @@
     },
     {
         "path":  "outputs\\release_notes.md",
-        "size_bytes":  684,
-        "sha256":  "9A1703678140AD43CAE090C3134B8C56A2968A3267A476D9233FDCBACD81E32A",
-        "modified":  "2026-02-24 22:53:20"
+        "size_bytes":  662,
+        "sha256":  "DAC134EC32F3C81754BD389737283C571FA8D84D7DD0005D93650CF16B3038DB",
+        "modified":  "2026-02-25 13:27:24"
     },
     {
         "path":  "outputs\\report.md",
-        "size_bytes":  11549,
-        "sha256":  "E8E4816A8F30E3F9B4CB41423120C011BA782FF2B2EE1F489640AD0769B6E38E",
-        "modified":  "2026-02-24 22:55:36"
+        "size_bytes":  11550,
+        "sha256":  "9AB7D3611C67C2E421823329A6995D21AE7A839E1AAFEA7F9291238EEC40945D",
+        "modified":  "2026-02-25 13:45:24"
     },
     {
         "path":  "outputs\\report_outline.md",
@@ -103,9 +109,9 @@
     },
     {
         "path":  "outputs\\run_log.md",
-        "size_bytes":  772,
-        "sha256":  "E66F85D1E779F60898062478025E420F893210E39250539589E4FC86DBBE5234",
-        "modified":  "2026-02-24 22:53:20"
+        "size_bytes":  819,
+        "sha256":  "6BE149955DB1E385067AE59BA9B2790D90859CCF87FF904B2EC53E265759B776",
+        "modified":  "2026-02-25 13:27:26"
     },
     {
         "path":  "outputs\\run_log_ci.md",
@@ -117,60 +123,60 @@
         "path":  "outputs\\sanity_checks.md",
         "size_bytes":  311,
         "sha256":  "60FF8FD6F433205AADBDEB435562E40CDE46691A100E1D0AE2D3DBB3EEA70FF8",
-        "modified":  "2026-02-24 22:53:19"
+        "modified":  "2026-02-25 13:27:23"
     },
     {
         "path":  "outputs\\scenario_stress.md",
         "size_bytes":  1084,
         "sha256":  "77F765F0EAF22397E5188914AC35985C9F63C648F733D89E7568C30B8CC8DBDF",
-        "modified":  "2026-02-24 22:55:40"
+        "modified":  "2026-02-25 13:45:30"
     },
     {
         "path":  "outputs\\summary.json",
-        "size_bytes":  763,
-        "sha256":  "887C6C5B99D1D0B5996017FC45FB9117D1C873D169CE32D3840E4850180C09D0",
-        "modified":  "2026-02-24 22:55:42"
+        "size_bytes":  764,
+        "sha256":  "C82B5C72647EBAE6B0443DEF5B7685A2DF79E045889B1245FFB5F2FA9134A250",
+        "modified":  "2026-02-25 13:45:31"
     },
     {
         "path":  "outputs\\charts\\fcf_capital_returns.png",
         "size_bytes":  26263,
         "sha256":  "BBE7F914B30B968CC9563EB591B11D640C7F95F4AD3B06EE77760AFE31E144C4",
-        "modified":  "2026-02-24 22:55:37"
+        "modified":  "2026-02-25 13:45:27"
     },
     {
         "path":  "outputs\\charts\\margins.png",
         "size_bytes":  22945,
         "sha256":  "397E955BF104C3C66DF17A81E8F737695921165CB4A015609D103487A73D65F9",
-        "modified":  "2026-02-24 22:55:37"
+        "modified":  "2026-02-25 13:45:27"
     },
     {
         "path":  "outputs\\charts\\net_cash.png",
         "size_bytes":  20831,
         "sha256":  "39B73F72A206CA5766F077F0FAB9D304845422820493E7D96A6D3D708FAD3F71",
-        "modified":  "2026-02-24 22:55:37"
+        "modified":  "2026-02-25 13:45:27"
     },
     {
         "path":  "outputs\\charts\\peer_margins.png",
         "size_bytes":  28164,
         "sha256":  "EEE5095C42B5D66FAEBF4FCB1CA6022B3035D77678442EA166AF84CBDD53094D",
-        "modified":  "2026-02-24 22:55:37"
+        "modified":  "2026-02-25 13:45:27"
     },
     {
         "path":  "outputs\\charts\\peer_multiples.png",
         "size_bytes":  29087,
         "sha256":  "0F14A71F2137CD875FDC9ABA8862A1409DA2ACCDBA0BF9930EA4703C9BC53499",
-        "modified":  "2026-02-24 22:55:37"
+        "modified":  "2026-02-25 13:45:27"
     },
     {
         "path":  "outputs\\charts\\peer_revenue_growth.png",
         "size_bytes":  20991,
         "sha256":  "819D5AF2AB04D2881A80340CDD786103BF704E881FF6FF7C763D822DBA7F684B",
-        "modified":  "2026-02-24 22:55:37"
+        "modified":  "2026-02-25 13:45:27"
     },
     {
         "path":  "outputs\\charts\\revenue_operating_income.png",
         "size_bytes":  22404,
         "sha256":  "7A9F2024CECC9D2DB97A15EA28210E7A73EEE3CDD2B60B13908D268D0B3C4425",
-        "modified":  "2026-02-24 22:55:37"
+        "modified":  "2026-02-25 13:45:27"
     }
 ]

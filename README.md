@@ -1,5 +1,5 @@
 # Projek-1
-Docs updated: 2026-02-24
+Docs updated: 2026-02-25
 
 Rust workspace centered on a detailed plan to analyze Apple Inc. fundamentals using SEC `data.sec.gov` APIs. The code is a minimal starter binary and can be expanded into a data-fetching and analysis tool.
 
@@ -99,6 +99,18 @@ Fetch SEC data and run the full report pack in one command.
 Retry SEC fetch with exponential backoff and log errors to `outputs/fetch_errors.md`.
 ```powershell
 .\scripts\fetch_sec_retry.ps1 -UserAgent "Name email@domain.com" -MaxAttempts 3 -BaseDelaySeconds 5
+```
+
+## SEC connectivity preflight (PowerShell)
+Ping `data.sec.gov` and record latency + status in `outputs/fetch_status.md`.
+```powershell
+.\scripts\check_sec_connectivity.ps1 -UserAgent "Name email@domain.com"
+```
+
+## SEC fetch (force fresh, no cache fallback)
+Skip cached `submissions_*.json` and `companyfacts_*.json` if downloads fail.
+```powershell
+.\scripts\fetch_sec_retry.ps1 -UserAgent "Name email@domain.com" -ForceFresh
 ```
 
 ## One-command refresh (dry run)
@@ -218,6 +230,8 @@ Run these in order after setting a real SEC User-Agent.
 - `outputs/report.md` draft report assembled from tables.
 - `models/dcf_base_case.csv` and `models/dcf_summary.md` illustrative DCF.
 - `research/notes_debt_liquidity.md` debt maturity and interest sensitivity notes.
+- `outputs/fetch_status.md` SEC fetch status (fresh vs cached).
+- `research/sec/request_status.csv` per-request status code and error summary.
 
 ## Troubleshooting
 - If SEC requests fail, ensure the User-Agent is a real name + email and try again.

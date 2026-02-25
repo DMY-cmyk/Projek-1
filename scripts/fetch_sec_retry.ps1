@@ -2,16 +2,12 @@ param(
     [string]$UserAgent,
     [int]$MaxAttempts = 3,
     [int]$BaseDelaySeconds = 5,
-    [string]$ErrorLog = "outputs/fetch_errors.md"
+    [string]$ErrorLog = "outputs/fetch_errors.md",
+    [switch]$ForceFresh
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
-
-if (-not $UserAgent -or $UserAgent.Trim().Length -lt 6) {
-    Write-Error "UserAgent is required. Example: -UserAgent \"Name email@domain.com\""
-    exit 1
-}
 
 function Write-ErrorLog([string]$message) {
     $outDir = Split-Path $ErrorLog -Parent
@@ -25,13 +21,28 @@ function Write-ErrorLog([string]$message) {
     $line | Out-File -FilePath $ErrorLog -Encoding utf8 -Append
 }
 
+if (-not $UserAgent -or $UserAgent.Trim().Length -lt 6) {
+    Write-Error "UserAgent is required. Example: -UserAgent \"Name email@domain.com\""
+    exit 1
+}
+
+$preflightOk = $true
+try {
+    & powershell.exe -ExecutionPolicy Bypass -File scripts/check_sec_connectivity.ps1 -UserAgent $UserAgent
+} catch {
+    $preflightOk = $false
+    Write-ErrorLog ("Preflight error: {0}" -f $_.Exception.Message)
+}
+
 $attempt = 0
 $success = $false
 while ($attempt -lt $MaxAttempts -and -not $success) {
     $attempt++
     Write-Host ("Attempt {0}/{1}..." -f $attempt, $MaxAttempts)
     try {
-        & powershell.exe -ExecutionPolicy Bypass -File scripts/fetch_sec_sources.ps1 -UserAgent $UserAgent
+        $forceFreshArg = @()
+        if ($ForceFresh) { $forceFreshArg = @("-ForceFresh") }
+        & powershell.exe -ExecutionPolicy Bypass -File scripts/fetch_sec_sources.ps1 -UserAgent $UserAgent @forceFreshArg
         if ($LASTEXITCODE -eq 0) {
             $success = $true
         } else {
@@ -53,3 +64,4 @@ if (-not $success) {
 }
 
 Write-Host "SEC fetch completed."
+
