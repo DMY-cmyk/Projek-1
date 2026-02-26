@@ -5,6 +5,14 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
+Write-Host "Refreshing peer fundamentals..."
+& powershell.exe -ExecutionPolicy Bypass -File scripts/update_peer_fundamentals.ps1
+$fundExit = $LASTEXITCODE
+if ($fundExit -ne 0) {
+    Write-Error "update_peer_fundamentals.ps1 failed with exit code $fundExit"
+    exit 1
+}
+
 Write-Host "Refreshing peer multiples..."
 & powershell.exe -ExecutionPolicy Bypass -File scripts/update_peer_multiples.ps1
 $updateExit = $LASTEXITCODE

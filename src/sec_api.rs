@@ -109,6 +109,36 @@ fn fetch_with_cache(
     Ok(())
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn normalize_cik_pads_short_input() {
+        assert_eq!(normalize_cik("320193").unwrap(), "0000320193");
+    }
+
+    #[test]
+    fn normalize_cik_already_padded() {
+        assert_eq!(normalize_cik("0000320193").unwrap(), "0000320193");
+    }
+
+    #[test]
+    fn normalize_cik_strips_prefix() {
+        assert_eq!(normalize_cik("CIK0000320193").unwrap(), "0000320193");
+    }
+
+    #[test]
+    fn normalize_cik_empty_input() {
+        assert!(normalize_cik("").is_err());
+    }
+
+    #[test]
+    fn normalize_cik_non_digit() {
+        assert!(normalize_cik("abc").is_err());
+    }
+}
+
 fn log_request(log_path: &Path, url: &str, status: &str) -> Result<()> {
     let timestamp = OffsetDateTime::now_utc()
         .format(&Rfc3339)

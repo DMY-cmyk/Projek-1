@@ -38,7 +38,13 @@ Write-Host "----------------"
     @{ Name = "validate_sec_files.ps1"; Desc = "Validate SEC JSON files are non-empty and parseable." },
     @{ Name = "restore_sec_cache.ps1"; Desc = "Restore cached SEC JSONs from latest backup." },
     @{ Name = "health_check_fetch.ps1"; Desc = "Rotate logs + preflight + fetch + summary." },
-    @{ Name = "fetch_sec_sources.ps1"; Desc = "Fetch SEC submissions/companyfacts and filings." }
+    @{ Name = "fetch_sec_sources.ps1"; Desc = "Fetch SEC submissions/companyfacts and filings." },
+    @{ Name = "update_peer_fundamentals.ps1"; Desc = "Auto-refresh data/peer_fundamentals.csv from SEC and web sources." },
+    @{ Name = "update_peer_multiples.ps1"; Desc = "Fetch latest peer multiples into data/peer_multiples.csv." },
+    @{ Name = "scheduled_refresh.ps1"; Desc = "Wrapper for scheduled refresh with outcome logging and alerts." },
+    @{ Name = "scheduled_peer_maintenance.ps1"; Desc = "Wrapper for scheduled peer maintenance with outcome logging." },
+    @{ Name = "check_scheduler_outcomes.ps1"; Desc = "Generate scheduler outcome report in outputs/scheduler_outcome.md." },
+    @{ Name = "list_scheduler_outcomes.ps1"; Desc = "Display recent scheduler outcomes from run_history.csv." }
 ) | ForEach-Object {
     Write-Host ("- {0}: {1}" -f $_.Name, $_.Desc)
 }

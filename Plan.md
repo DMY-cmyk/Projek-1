@@ -48,7 +48,7 @@ Last updated: 2026-02-25
 
 ## 4) Clean and reconcile
 - Check totals vs subtotals (segment sums, geography sums). (Completed; `data/reconciliation_notes.md`)
-- Adjust for any accounting changes or reclassifications. (Completed; no adjustments needed — all accounting standard changes predate FY2021 window; see `data/one_time_items_notes.md`)
+- Adjust for any accounting changes or reclassifications. (Completed; no adjustments needed ï¿½ all accounting standard changes predate FY2021 window; see `data/one_time_items_notes.md`)
 - Confirm annual totals match SEC facts periods and fiscal year end dates. (Completed; automated checks)
 - Flag one-time items (legal settlements, tax benefits, impairments). (Completed; `data/one_time_items_notes.md`)
 - Basic null/consistency checks report: `data/validation_report.txt` (Completed; `scripts/validate_financials.ps1`)
@@ -193,6 +193,6 @@ Last updated: 2026-02-25
 - Define peer-data maintenance cadence and validation checks for `data/peer_multiples.csv` and `data/peer_fundamentals.csv`. (Completed; `scripts/verify_peer_data.ps1`, `scripts/peer_maintenance.ps1`, weekly schedule)
 
 ## 19) Next strategic work (remaining)
-- Add automated refresh for `data/peer_fundamentals.csv` from authoritative sources (matching current peer multiples cadence). (Pending)
-- Add Rust integration tests for `run-pipeline` to verify end-to-end orchestration behavior under CI. (Pending)
-- Add scheduler run outcome logging/alerts (success/failure summary) to reduce silent maintenance drift. (Pending)
+- Add automated refresh for `data/peer_fundamentals.csv` from authoritative sources (matching current peer multiples cadence). (Completed; `scripts/update_peer_fundamentals.ps1`, integrated into `scripts/peer_maintenance.ps1`)
+- Add Rust integration tests for `run-pipeline` to verify end-to-end orchestration behavior under CI. (Completed; `tests/cli_tests.rs`, `tests/pipeline_tests.rs`, `src/sec_api.rs` unit tests, CI workflow updated)
+- Add scheduler run outcome logging/alerts (success/failure summary) to reduce silent maintenance drift. (Completed; `scripts/scheduled_refresh.ps1`, `scripts/scheduled_peer_maintenance.ps1`, `scripts/check_scheduler_outcomes.ps1`, `scripts/list_scheduler_outcomes.ps1`, `scripts/append_run_history.ps1` extended with ExitCode/Status)

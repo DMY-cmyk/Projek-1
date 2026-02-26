@@ -16,8 +16,8 @@ if (-not $UserAgent -or $UserAgent.Trim().Length -lt 6) {
 }
 
 $root = (Resolve-Path "$PSScriptRoot\..").Path
-$refreshScript = Join-Path $root "scripts\refresh_with_auto_price.ps1"
-$peerScript = Join-Path $root "scripts\peer_maintenance.ps1"
+$refreshScript = Join-Path $root "scripts\scheduled_refresh.ps1"
+$peerScript = Join-Path $root "scripts\scheduled_peer_maintenance.ps1"
 $userAgentFilePath = Join-Path $root $UserAgentFile
 $uaDir = Split-Path -Parent $userAgentFilePath
 if ($uaDir -and -not (Test-Path $uaDir)) {

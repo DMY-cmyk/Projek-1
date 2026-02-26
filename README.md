@@ -1,5 +1,5 @@
 # Projek-1
-Docs updated: 2026-02-25
+Docs updated: 2026-02-26
 
 Rust workspace centered on a detailed plan to analyze Apple Inc. fundamentals using SEC `data.sec.gov` APIs. The project already includes an operational PowerShell pipeline plus Rust CLI commands for SEC fetch and end-to-end runs.
 
@@ -381,10 +381,40 @@ Create/update weekly scheduled tasks for auto refresh and peer maintenance.
 .\scripts\register_maintenance_tasks.ps1 -UserAgent "Name email@domain.com"
 ```
 
+## Peer fundamentals refresh (PowerShell)
+Auto-refresh `data/peer_fundamentals.csv` from SEC (MSFT, GOOGL), stockanalysis.com (Samsung), and local data (Apple).
+```powershell
+.\scripts\update_peer_fundamentals.ps1
+```
+
 ## Peer multiples refresh (PowerShell)
 Fetch latest peer multiples (best-effort HTML parsing) into `data/peer_multiples.csv`.
 ```powershell
 .\scripts\update_peer_multiples.ps1
+```
+
+## Scheduled refresh wrapper (PowerShell)
+Wrapper for `refresh_with_auto_price.ps1` with outcome logging, run history, and Windows Event Log alerts on failure.
+```powershell
+.\scripts\scheduled_refresh.ps1
+```
+
+## Scheduled peer maintenance wrapper (PowerShell)
+Wrapper for `peer_maintenance.ps1` with outcome logging and alerts.
+```powershell
+.\scripts\scheduled_peer_maintenance.ps1
+```
+
+## Scheduler outcome report (PowerShell)
+Generate a PASS/FAIL outcome report in `outputs/scheduler_outcome.md`.
+```powershell
+.\scripts\check_scheduler_outcomes.ps1
+```
+
+## List scheduler outcomes (PowerShell)
+Display recent scheduler run outcomes with success/failure counts.
+```powershell
+.\scripts\list_scheduler_outcomes.ps1 -Count 10
 ```
 
 ## Analysis pipeline (PowerShell)
@@ -427,6 +457,6 @@ Run these in order after setting a real SEC User-Agent.
 - Validate SEC data against filings and log API requests.
 
 ## Next steps
-- Keep monitoring scheduled task runs (`Projek1-RefreshWeekly`, `Projek1-PeerMaintenanceWeekly`) and adjust cadence if needed.
-- Extend peer maintenance to auto-refresh `data/peer_fundamentals.csv` from authoritative sources.
-- Add end-to-end Rust tests for `run-pipeline` once CI environment includes SEC-friendly network/user-agent configuration.
+- Keep monitoring scheduled task runs (`Projek1-RefreshWeekly`, `Projek1-PeerMaintenanceWeekly`) via `list_scheduler_outcomes.ps1` and `check_scheduler_outcomes.ps1`.
+- Review `outputs/scheduler_outcome.md` after each scheduled run for PASS/FAIL verdicts.
+- All Plan.md roadmap items (sections 0-19) are complete.

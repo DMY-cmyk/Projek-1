@@ -1,5 +1,5 @@
 # Projek-1
-Dokumen diperbarui: 2026-02-25
+Dokumen diperbarui: 2026-02-26
 
 Workspace Rust yang berpusat pada rencana detail untuk menganalisis fundamental Apple Inc. menggunakan API SEC `data.sec.gov`. Proyek ini sudah memiliki pipeline PowerShell operasional plus perintah Rust CLI untuk fetch SEC dan run end-to-end.
 
@@ -381,10 +381,40 @@ Buat/perbarui task mingguan untuk auto refresh dan maintenance peer.
 .\scripts\register_maintenance_tasks.ps1 -UserAgent "Name email@domain.com"
 ```
 
+## Refresh fundamental peer (PowerShell)
+Refresh otomatis `data/peer_fundamentals.csv` dari SEC (MSFT, GOOGL), stockanalysis.com (Samsung), dan data lokal (Apple).
+```powershell
+.\scripts\update_peer_fundamentals.ps1
+```
+
 ## Refresh multiple peer (PowerShell)
 Ambil multiple peer terbaru (parsing HTML best-effort) ke `data/peer_multiples.csv`.
 ```powershell
 .\scripts\update_peer_multiples.ps1
+```
+
+## Wrapper refresh terjadwal (PowerShell)
+Wrapper untuk `refresh_with_auto_price.ps1` dengan logging outcome, riwayat run, dan alert Windows Event Log saat gagal.
+```powershell
+.\scripts\scheduled_refresh.ps1
+```
+
+## Wrapper maintenance peer terjadwal (PowerShell)
+Wrapper untuk `peer_maintenance.ps1` dengan logging outcome dan alert.
+```powershell
+.\scripts\scheduled_peer_maintenance.ps1
+```
+
+## Laporan outcome scheduler (PowerShell)
+Hasilkan laporan outcome PASS/FAIL di `outputs/scheduler_outcome.md`.
+```powershell
+.\scripts\check_scheduler_outcomes.ps1
+```
+
+## Lihat outcome scheduler (PowerShell)
+Tampilkan outcome scheduler terbaru beserta jumlah sukses/gagal.
+```powershell
+.\scripts\list_scheduler_outcomes.ps1 -Count 10
 ```
 
 ## Pipeline analisis (PowerShell)
@@ -427,6 +457,6 @@ Jalankan ini berurutan setelah mengatur User-Agent SEC yang valid.
 - Validasi data SEC terhadap filing dan catat permintaan API.
 
 ## Langkah berikutnya
-- Pantau hasil task scheduler (`Projek1-RefreshWeekly`, `Projek1-PeerMaintenanceWeekly`) dan sesuaikan cadence bila diperlukan.
-- Kembangkan maintenance peer agar juga me-refresh otomatis `data/peer_fundamentals.csv` dari sumber primer.
-- Tambahkan test end-to-end Rust untuk `run-pipeline` saat environment CI sudah punya konfigurasi network/user-agent SEC yang aman.
+- Pantau hasil task scheduler (`Projek1-RefreshWeekly`, `Projek1-PeerMaintenanceWeekly`) via `list_scheduler_outcomes.ps1` dan `check_scheduler_outcomes.ps1`.
+- Tinjau `outputs/scheduler_outcome.md` setelah setiap run terjadwal untuk verdict PASS/FAIL.
+- Seluruh item roadmap Plan.md (bagian 0-19) telah selesai.
